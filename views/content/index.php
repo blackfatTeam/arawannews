@@ -11,12 +11,14 @@ $baseUriCss = $baseUri.'/assets/theme';
 
 <!--Blog Section Here-->
 <section class="row">
-	<div class="container-fluid">
+	<div class="container">
 		<div class="row">
 			<!--Single Blog Here-->
 			<?= yii\base\View::render('single-blog', [
-
-			]); ?>
+        		'content'=>$content,
+        		'thumbnail'=>$thumbnail,
+				'relateContent'=>$relateContent
+        ]);?>
 			<!--Sidebar Here-->						
 			<div class="col-sm-4 sidebar">
 			
