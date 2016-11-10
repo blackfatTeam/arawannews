@@ -1,4 +1,5 @@
-<?php 
+<?php
+use app\lib\OnlineConfig;
 $baseUri = Yii::getAlias('@web');
 $baseUriCss = $baseUri.'/assets/theme';
 ?>
@@ -7,23 +8,23 @@ $baseUriCss = $baseUri.'/assets/theme';
 <section class="row featured_posts">
 	<div class="container-fluid">
 	
-		<?php for ($i=1;$i<=6;$i++){?>
-		<div class="row" id="featured_posts">
+		<?php foreach (OnlineConfig::$arrSection as $key => $lst):?>
+		<div id="<?php echo $key ?>" style="position: relative;">
+		<div style="position: absolute; top: 0; left: 0; z-index:999; background-color: #FF0000;color: #FFFFFF;opacity: 0.6; margin-top: 15px;text-align: center;padding: 15px;"><?php echo $lst['title']?></div>
+		<div class="row">
 			<div class="col-lg-6 col-md-6 post">
 				<div class="row inner">
 					<img src="<?= $baseUriCss?>/images/posts/features/1.jpg" alt="" class="featured-img">
 					<div class="row m0 content">
 						<h4 class="category politics">
-							<a href="#">politics</a>
+							<a href="#"><?php echo $lst['title']?></a>
 						</h4>
 						<h2 class="title">
 							<a href="single-blog.html">U.S. House Chamber Closed After
 								Unknown Material</a>
 						</h2>
 						<ul class="post_meta nav nav-pills">
-							<li><a href="#">August 6, 2015</a></li>
-							<li><a href="#"><i class="fa fa-thumbs-o-up"></i>1456</a></li>
-							<li><a href="#"><i class="fa fa-commenting"></i>32</a></li>
+							<li><a href="#">3  มิถุนายน 2559, 14:00 น.</a></li>
 						</ul>
 					</div>
 				</div>
@@ -33,16 +34,14 @@ $baseUriCss = $baseUri.'/assets/theme';
 					<img src="<?= $baseUriCss?>/images/posts/features/2.jpg" alt="" class="featured-img">
 					<div class="row m0 content">
 						<h4 class="category sports">
-							<a href="#">sports</a>
+							<a href="#"><?php echo $lst['title']?></a>
 						</h4>
 						<h2 class="title">
 							<a href="single-blog.html">Philip Rivers: I’m going to be a
 								Charger, wherever we are</a>
 						</h2>
 						<ul class="post_meta nav nav-pills">
-							<li><a href="#">August 6, 2015</a></li>
-							<li><a href="#"><i class="fa fa-thumbs-o-up"></i>1456</a></li>
-							<li><a href="#"><i class="fa fa-commenting"></i>32</a></li>
+							<li><a href="#">3  มิถุนายน 2559, 14:00 น.</a></li>
 						</ul>
 					</div>
 				</div>
@@ -52,24 +51,22 @@ $baseUriCss = $baseUri.'/assets/theme';
 					<img src="<?= $baseUriCss?>/images/posts/features/2.jpg" alt="" class="featured-img">
 					<div class="row m0 content">
 						<h4 class="category sports">
-							<a href="#">sports</a>
+							<a href="#"><?php echo $lst['title']?></a>
 						</h4>
 						<h2 class="title">
 							<a href="single-blog.html">Philip Rivers: I’m going to be a
 								Charger, wherever we are</a>
 						</h2>
 						<ul class="post_meta nav nav-pills">
-							<li><a href="#">August 6, 2015</a></li>
-							<li><a href="#"><i class="fa fa-thumbs-o-up"></i>1456</a></li>
-							<li><a href="#"><i class="fa fa-commenting"></i>32</a></li>
+							<li><a href="#">3  มิถุนายน 2559, 14:00 น.</a></li>
 						</ul>
 					</div>
 				</div>
 			</div>
 			
 		</div>
-		
-		<?php }?>
+		</div>
+		<?php endforeach;?>
 		
 
 		

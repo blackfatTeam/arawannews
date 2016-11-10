@@ -111,7 +111,14 @@ $baseUriCss = $baseUri.'/assets/theme';
     
     <!--Theme JS-->
     <script src="<?= $baseUriCss?>/js/theme.js"></script>
-    <script src="<?= $baseUriCss?>/js/infinite1.js"></script>	
+    <script src="<?= $baseUriCss?>/js/infinite1.js"></script>
+    <script>
+    $( document ).ready(function() {
+    	$('.scrollspyMenu').toggleClass('show');
+        return false
+    });
+
+    </script>	
 <?php $this->endBody() ?>
 </body>
 <!-- END BODY -->

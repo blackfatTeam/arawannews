@@ -1,5 +1,5 @@
 <?php
-
+use app\lib\OnlineConfig;
 use common\models\User;
 use yii\helpers\Html;
 $identity = \Yii::$app->user->getIdentity ();
@@ -69,23 +69,15 @@ $uri = Yii::$app->controller->getRoute ();
 				</button>
 				<div id="top_nav" class="collapse navbar-collapse fleft">
 					<ul class="nav navbar-nav">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="#">All Pages</a>
+						<li><a href="javascript:;">หมวดข่าว</a>
 							<ul class="nav">
-								<li><a href="index2.html">Home 2</a></li>
-								<li><a href="about.html">About</a></li>
-								<li><a href="coming-soon.html">Coming Soon</a></li>
-								<li><a href="elements.html">Elements</a></li>
-								<li><a href="typography.html">Typography</a></li>
-								<li><a href="font-awesome-cheatsheet.html">Font Awesome</a></li>
-								<li><a href="header-styles.html">Header Styles</a></li>
-								<li><a href="single-blog.html">Single Blog</a></li>
-								<li><a href="404.html">404</a></li>
-							</ul></li>
-						<li><a href="gallery.html">Gallery</a></li>
-						<li><a href="author-post.html">Author</a></li>
-						<li><a href="contact.html">Contact</a></li>
-						<li><a href="newsletter-signup.html" class="subscribe_popup">Subscribe</a></li>
+								<?php foreach (OnlineConfig::$arrSection as $key => $lst):?>
+								<li><a href="javascript:;"><?php echo $lst['title']?></a></li>
+								<?php endforeach;?>
+							</ul>
+						</li>
+						<li><a href="javascript:;">หน้าหลัก</a></li>
+						
 					</ul>
 				</div>
 			</div>

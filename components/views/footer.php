@@ -1,5 +1,6 @@
 <?php
 use common\models\User;
+use app\lib\OnlineConfig;
 $identity = \Yii::$app->user->getIdentity ();
 $baseUri = \Yii::getAlias ( '@web' );
 $baseUriCss = $baseUri . '/assets/theme';
@@ -245,21 +246,16 @@ $uri = Yii::$app->controller->getRoute ();
 
 <!--*****************************************************************************************************************-->
 <!--Side Scrollspy-->
+<?php if (!empty(OnlineConfig::$arrSection)):?>
 <div class="row m0 scrollspyMenu">
 	<ul class="nav">
-		<li><a href="#featured_posts"></a> <span class="tooltip_layer">Feature
-				Posts</span></li>
-		<li><a href="#all_posts"></a> <span class="tooltip_layer">All Posts</span>
-		</li>
-		<li><a href="#popular_videos"></a> <span class="tooltip_layer">Popular
-				Videos</span></li>
-		<li><a href="#about_us"></a> <span class="tooltip_layer">About Us</span>
-		</li>
-		<li><a href="#projects"></a> <span class="tooltip_layer">Projects</span>
-		</li>
+		<?php foreach (OnlineConfig::$arrSection as $key => $lst):?>
+		<li><a href="#<?php echo $key ?>"></a> <span class="tooltip_layer"><?php echo $lst['title']?></span></li>
+		<?php endforeach;?>
 	</ul>
 
 	<a href="#header" id="go_top">On Top<i class="fa fa-angle-double-right"></i></a>
 </div>
+<?php endif;?>
 <!--Side Scrollspy-->
 <!--*****************************************************************************************************************-->
