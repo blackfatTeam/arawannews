@@ -28,6 +28,88 @@ $baseUriCss = $baseUri.'/assets/theme';
 			</div>
 			<div class="col-lg-6 col-md-6 post">
 				<div class="row inner">
+					<img src="<?= $baseUriCss?>/images/posts/features/2.jpg" alt="" class="featured-img">
+					<div class="row m0 content">
+						<h4 class="category sports">
+							<a href="#">sports</a>
+						</h4>
+						<h2 class="title">
+							<a href="single-blog.html">Philip Rivers: I’m going to be a
+								Charger, wherever we are</a>
+						</h2>
+						<ul class="post_meta nav nav-pills">
+							<li><a href="#">August 6, 2015</a></li>
+							<li><a href="#"><i class="fa fa-thumbs-o-up"></i>1456</a></li>
+							<li><a href="#"><i class="fa fa-commenting"></i>32</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-6 post">
+				<div class="row inner">
+					<img src="<?= $baseUriCss?>/images/posts/features/2.jpg" alt="" class="featured-img">
+					<div class="row m0 content">
+						<h4 class="category sports">
+							<a href="#">sports</a>
+						</h4>
+						<h2 class="title">
+							<a href="single-blog.html">Philip Rivers: I’m going to be a
+								Charger, wherever we are</a>
+						</h2>
+						<ul class="post_meta nav nav-pills">
+							<li><a href="#">August 6, 2015</a></li>
+							<li><a href="#"><i class="fa fa-thumbs-o-up"></i>1456</a></li>
+							<li><a href="#"><i class="fa fa-commenting"></i>32</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		
+		<div class="row" id="featured_posts">
+			
+			
+			<div class="col-lg-6 col-md-6 post">
+				<div class="row inner">
+					<img src="<?= $baseUriCss?>/images/posts/features/2.jpg" alt="" class="featured-img">
+					<div class="row m0 content">
+						<h4 class="category sports">
+							<a href="#">sports</a>
+						</h4>
+						<h2 class="title">
+							<a href="single-blog.html">Philip Rivers: I’m going to be a
+								Charger, wherever we are</a>
+						</h2>
+						<ul class="post_meta nav nav-pills">
+							<li><a href="#">August 6, 2015</a></li>
+							<li><a href="#"><i class="fa fa-thumbs-o-up"></i>1456</a></li>
+							<li><a href="#"><i class="fa fa-commenting"></i>32</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="row inner">
+					<img src="<?= $baseUriCss?>/images/posts/features/2.jpg" alt="" class="featured-img">
+					<div class="row m0 content">
+						<h4 class="category sports">
+							<a href="#">sports</a>
+						</h4>
+						<h2 class="title">
+							<a href="single-blog.html">Philip Rivers: I’m going to be a
+								Charger, wherever we are</a>
+						</h2>
+						<ul class="post_meta nav nav-pills">
+							<li><a href="#">August 6, 2015</a></li>
+							<li><a href="#"><i class="fa fa-thumbs-o-up"></i>1456</a></li>
+							<li><a href="#"><i class="fa fa-commenting"></i>32</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<div class="col-lg-6 col-md-6 post">
+				<div class="row inner">
 					<img src="<?= $baseUriCss?>/images/posts/features/1.jpg" alt="" class="featured-img">
 					<div class="row m0 content">
 						<h4 class="category politics">
@@ -46,148 +128,11 @@ $baseUriCss = $baseUri.'/assets/theme';
 				</div>
 			</div>
 			
-		</div>
-		
-		
-		<div class="row" id="featured_posts">
 			
-			
-			<div class="col-lg-6 col-md-6 post">
-				<div class="row inner">
-					<img src="<?= $baseUriCss?>/images/posts/features/2.jpg" alt="" class="featured-img">
-					<div class="row m0 content">
-						<h4 class="category sports">
-							<a href="#">sports</a>
-						</h4>
-						<h2 class="title">
-							<a href="single-blog.html">Philip Rivers: I’m going to be a
-								Charger, wherever we are</a>
-						</h2>
-						<ul class="post_meta nav nav-pills">
-							<li><a href="#">August 6, 2015</a></li>
-							<li><a href="#"><i class="fa fa-thumbs-o-up"></i>1456</a></li>
-							<li><a href="#"><i class="fa fa-commenting"></i>32</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			
-			
-			
-			<div class="col-lg-6 col-md-6 post">
-				<div class="row inner">
-					<img src="<?= $baseUriCss?>/images/posts/features/2.jpg" alt="" class="featured-img">
-					<div class="row m0 content">
-						<h4 class="category sports">
-							<a href="#">sports</a>
-						</h4>
-						<h2 class="title">
-							<a href="single-blog.html">Philip Rivers: I’m going to be a
-								Charger, wherever we are</a>
-						</h2>
-						<ul class="post_meta nav nav-pills">
-							<li><a href="#">August 6, 2015</a></li>
-							<li><a href="#"><i class="fa fa-thumbs-o-up"></i>1456</a></li>
-							<li><a href="#"><i class="fa fa-commenting"></i>32</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<div class="row" id="featured_posts">
-			
-			
-			<div class="col-lg-6 col-md-6 post">
-				<div class="row inner">
-					<img src="<?= $baseUriCss?>/images/posts/features/2.jpg" alt="" class="featured-img">
-					<div class="row m0 content">
-						<h4 class="category sports">
-							<a href="#">sports</a>
-						</h4>
-						<h2 class="title">
-							<a href="single-blog.html">Philip Rivers: I’m going to be a
-								Charger, wherever we are</a>
-						</h2>
-						<ul class="post_meta nav nav-pills">
-							<li><a href="#">August 6, 2015</a></li>
-							<li><a href="#"><i class="fa fa-thumbs-o-up"></i>1456</a></li>
-							<li><a href="#"><i class="fa fa-commenting"></i>32</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			
-			
-			
-			<div class="col-lg-6 col-md-6 post">
-				<div class="row inner">
-					<img src="<?= $baseUriCss?>/images/posts/features/2.jpg" alt="" class="featured-img">
-					<div class="row m0 content">
-						<h4 class="category sports">
-							<a href="#">sports</a>
-						</h4>
-						<h2 class="title">
-							<a href="single-blog.html">Philip Rivers: I’m going to be a
-								Charger, wherever we are</a>
-						</h2>
-						<ul class="post_meta nav nav-pills">
-							<li><a href="#">August 6, 2015</a></li>
-							<li><a href="#"><i class="fa fa-thumbs-o-up"></i>1456</a></li>
-							<li><a href="#"><i class="fa fa-commenting"></i>32</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		<div class="row" id="featured_posts">
-			
-			
-			<div class="col-lg-6 col-md-6 post">
-				<div class="row inner">
-					<img src="<?= $baseUriCss?>/images/posts/features/2.jpg" alt="" class="featured-img">
-					<div class="row m0 content">
-						<h4 class="category sports">
-							<a href="#">sports</a>
-						</h4>
-						<h2 class="title">
-							<a href="single-blog.html">Philip Rivers: I’m going to be a
-								Charger, wherever we are</a>
-						</h2>
-						<ul class="post_meta nav nav-pills">
-							<li><a href="#">August 6, 2015</a></li>
-							<li><a href="#"><i class="fa fa-thumbs-o-up"></i>1456</a></li>
-							<li><a href="#"><i class="fa fa-commenting"></i>32</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			
-			
-			
-			<div class="col-lg-6 col-md-6 post">
-				<div class="row inner">
-					<img src="<?= $baseUriCss?>/images/posts/features/2.jpg" alt="" class="featured-img">
-					<div class="row m0 content">
-						<h4 class="category sports">
-							<a href="#">sports</a>
-						</h4>
-						<h2 class="title">
-							<a href="single-blog.html">Philip Rivers: I’m going to be a
-								Charger, wherever we are</a>
-						</h2>
-						<ul class="post_meta nav nav-pills">
-							<li><a href="#">August 6, 2015</a></li>
-							<li><a href="#"><i class="fa fa-thumbs-o-up"></i>1456</a></li>
-							<li><a href="#"><i class="fa fa-commenting"></i>32</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
 		</div>
 
 		<div class="row" id="featured_posts">
+			
 			<div class="col-lg-3 col-md-3 post">
 				<div class="row inner">
 					<img src="<?= $baseUriCss?>/images/posts/features/3.jpg" alt="" class="featured-img">
@@ -226,6 +171,53 @@ $baseUriCss = $baseUri.'/assets/theme';
 					</div>
 				</div>
 			</div>
+			
+			<div class="col-lg-6 col-md-6 post">
+				<div class="row inner">
+					<img src="<?= $baseUriCss?>/images/posts/features/2.jpg" alt="" class="featured-img">
+					<div class="row m0 content">
+						<h4 class="category sports">
+							<a href="#">sports</a>
+						</h4>
+						<h2 class="title">
+							<a href="single-blog.html">Philip Rivers: I’m going to be a
+								Charger, wherever we are</a>
+						</h2>
+						<ul class="post_meta nav nav-pills">
+							<li><a href="#">August 6, 2015</a></li>
+							<li><a href="#"><i class="fa fa-thumbs-o-up"></i>1456</a></li>
+							<li><a href="#"><i class="fa fa-commenting"></i>32</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			
+			
+			
+		</div>
+
+		<div class="row" id="featured_posts">
+		
+			<div class="col-lg-6 col-md-6 post">
+				<div class="row inner">
+					<img src="<?= $baseUriCss?>/images/posts/features/2.jpg" alt="" class="featured-img">
+					<div class="row m0 content">
+						<h4 class="category sports">
+							<a href="#">sports</a>
+						</h4>
+						<h2 class="title">
+							<a href="single-blog.html">Philip Rivers: I’m going to be a
+								Charger, wherever we are</a>
+						</h2>
+						<ul class="post_meta nav nav-pills">
+							<li><a href="#">August 6, 2015</a></li>
+							<li><a href="#"><i class="fa fa-thumbs-o-up"></i>1456</a></li>
+							<li><a href="#"><i class="fa fa-commenting"></i>32</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
 			<div class="col-lg-3 col-md-3 post">
 				<div class="row inner">
 					<img src="<?= $baseUriCss?>/images/posts/features/3.jpg" alt="" class="featured-img">
@@ -264,6 +256,7 @@ $baseUriCss = $baseUri.'/assets/theme';
 					</div>
 				</div>
 			</div>
+			
 		</div>
 		
 		
