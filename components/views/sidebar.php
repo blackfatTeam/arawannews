@@ -52,7 +52,7 @@ $uri = Yii::$app->controller->getRoute ();
 			</div>
 
 			<div class="rightSide_nav pull-right">
-				<div class="fleft current_date"></div>
+				<!-- <div class="fleft current_date"></div> -->
 				<div class="fright search_dot">
 					<ul class="nav navbar-nav">
 						<li><a href="search-form.html" id="search_form"><i
