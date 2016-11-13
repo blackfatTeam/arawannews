@@ -113,10 +113,10 @@ $baseUriCss = $baseUri.'/assets/theme';
     <script src="<?= $baseUriCss?>/js/theme.js"></script>
     <script src="<?= $baseUriCss?>/js/infinite1.js"></script>
     <script>
-    $( document ).ready(function() {
+    /* $( document ).ready(function() {
     	$('.scrollspyMenu').toggleClass('show');
         return false
-    });
+    }); */
 
     </script>	
 <?php $this->endBody() ?>
