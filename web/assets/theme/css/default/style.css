@@ -3168,7 +3168,7 @@ body.gallery-page #page_nav {
 }
 .comments .comments_row .comment .media-left .comment_img img {
   width: 100%;
-  border-radius: 100%;
+  /* border-radius: 100%; */
 }
 .comments .comments_row .comment .media-left .comment_img + .reply_link {
   position: absolute;

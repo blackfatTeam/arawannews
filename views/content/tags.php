@@ -3,7 +3,7 @@ $baseUri = Yii::getAlias ( '@web' );
 $baseUriCss = $baseUri . '/assets/theme';
 ?>
 <div class="row m0 post_tags">
-	<h3 class="heading">post tags</h3>
+	<h3 class="heading">tags</h3>
 	<div class="tag_row">
 		<a href="#" class="tag">business</a> <a href="#" class="tag">technology</a>
 		<a href="#" class="tag">photography</a> <a href="#" class="tag">electronics</a>
