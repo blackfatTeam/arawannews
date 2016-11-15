@@ -8,7 +8,12 @@ $baseUriCss = $baseUri . '/assets/theme';
 $user = \Yii::$app->user;
 $uri = Yii::$app->controller->getRoute ();
 ?>
-
+<style>
+.hotTopicMenu{
+	color: #FFFFFF;
+	margin: 0 10px;
+}
+</style>
 <div class="slideMenuClose"></div>
 
 <section class="preloader preloader2 row">
@@ -41,14 +46,16 @@ $uri = Yii::$app->controller->getRoute ();
 			</div>
 
 			<div class="follow_nav fleft">
-				<div class="fleft menuTitle">Follow Us:</div>
-				<ul class="nav nav-pills">
+				<div class="fleft menuTitle"><a href="#" class="hotTopicMenu">จำนำข้าว</a></div>
+				<div class="fleft menuTitle"><a href="#" class="hotTopicMenu">เลือกตั้งสหรัฐอเมริกา</a></div>
+				<div class="fleft menuTitle"><a href="#" class="hotTopicMenu">ประชามติ</a></div>
+				<!-- <ul class="nav nav-pills">
 					<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
 					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
 					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 					<li><a href="#"><i class="fa fa-vk"></i></a></li>
 					<li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
-				</ul>
+				</ul> -->
 			</div>
 
 			<div class="rightSide_nav pull-right">

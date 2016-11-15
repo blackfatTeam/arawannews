@@ -6,6 +6,14 @@ $baseUriCss = $baseUri.'/assets/theme';
 <div style="margin: 15px;">
 	<h2>ข่าวที่เกี่ยวกับ: จำนำข้าว</h2>
 </div>
+                <form action="#" class="row m0 search_form_404">
+                    <div class="input-group">
+                        <input type="search" class="form-control" placeholder="Search">
+                        <span class="input-group-addon">
+                            <button type="submit" class="btn"><i class="fa fa-search"></i></button>
+                        </span>
+                    </div>
+                </form>
 <hr>
 <section class="row all_posts" id="all_posts">
 	<div class="post_sizer"></div> <!--This is not a post-->
