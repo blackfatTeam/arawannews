@@ -1,18 +1,20 @@
 <?php
 use app\lib\OnlineConfig;
+use app\lib\DateUtil;
 $baseUri = Yii::getAlias('@web');
 $baseUriCss = $baseUri.'/assets/theme';
 ?>
 <!--*****************************************************************************************************************-->
 <!--Feature Posts Here-->
+<?php if (!empty($model[OnlineConfig::ONLINE_HOME])):?>
 <section class="row featured_posts">
 	<div class="container-fluid">
-	
-		<?php //foreach (OnlineConfig::$arrSection as $key => $lst):?>
 
-		
 		<div class="row">
 			<div class="col-lg-6 col-md-6 post">
+				<?php $arrModel = array_splice($model[OnlineConfig::ONLINE_HOME], 0 ,1);?>
+				<?php if (!empty($arrModel)):?>
+				<?php foreach ($arrModel as $lst):?>
 				<div class="row inner">
 					<img src="<?= $baseUriCss?>/images/posts/features/1.jpg" alt="" class="featured-img">
 					<div class="row m0 content">
@@ -20,16 +22,20 @@ $baseUriCss = $baseUri.'/assets/theme';
 							<a href="#">111</a>
 						</h4>
 						<h2 class="title">
-							<a href="single-blog.html">U.S. House Chamber Closed After
-								Unknown Material</a>
+							<a class="dropShadow" href="single-blog.html"><?php echo $lst['title']?></a>
 						</h2>
 						<ul class="post_meta nav nav-pills">
-							<li><a href="#">3  มิถุนายน 2559, 14:00 น.</a></li>
+							<li><a href="#"><?php echo DateUtil::th_date('j F Y, H:i น.', strtotime($lst['publishTime']))?></a></li>
 						</ul>
 					</div>
 				</div>
+				<?php endforeach;?>
+				<?php endif; ?>
 			</div>
 			<div class="col-lg-6 col-md-6 post">
+				<?php $arrModel = array_splice($model[OnlineConfig::ONLINE_HOME], 0 ,1);?>
+				<?php if (!empty($arrModel)):?>
+				<?php foreach ($arrModel as $lst):?>
 				<div class="row inner">
 					<img src="<?= $baseUriCss?>/images/posts/features/2.jpg" alt="" class="featured-img">
 					<div class="row m0 content">
@@ -37,16 +43,20 @@ $baseUriCss = $baseUri.'/assets/theme';
 							<a href="#">22222</a>
 						</h4>
 						<h2 class="title">
-							<a href="single-blog.html">Philip Rivers: I’m going to be a
-								Charger, wherever we are</a>
+							<a href="single-blog.html"><?php echo $lst['title']?></a>
 						</h2>
 						<ul class="post_meta nav nav-pills">
-							<li><a href="#">3  มิถุนายน 2559, 14:00 น.</a></li>
+							<li><a href="#"><?php echo DateUtil::th_date('j F Y, H:i น.', strtotime($lst['publishTime']))?></a></li>
 						</ul>
 					</div>
 				</div>
+				<?php endforeach;?>
+				<?php endif; ?>
 			</div>
 			<div class="col-lg-6 col-md-6 post">
+				<?php $arrModel = array_splice($model[OnlineConfig::ONLINE_HOME], 0 ,1);?>
+				<?php if (!empty($arrModel)):?>
+				<?php foreach ($arrModel as $lst):?>
 				<div class="row inner">
 					<img src="<?= $baseUriCss?>/images/posts/features/2.jpg" alt="" class="featured-img">
 					<div class="row m0 content">
@@ -54,28 +64,21 @@ $baseUriCss = $baseUri.'/assets/theme';
 							<a href="#">3333</a>
 						</h4>
 						<h2 class="title">
-							<a href="single-blog.html">Philip Rivers: I’m going to be a
-								Charger, wherever we are</a>
+							<a href="single-blog.html"><?php echo $lst['title']?></a>
 						</h2>
 						<ul class="post_meta nav nav-pills">
-							<li><a href="#">3  มิถุนายน 2559, 14:00 น.</a></li>
+							<li><a href="#"><?php echo DateUtil::th_date('j F Y, H:i น.', strtotime($lst['publishTime']))?></a></li>
 						</ul>
 					</div>
 				</div>
+				<?php endforeach;?>
+				<?php endif; ?>
 			</div>
 			
-		</div>
-		
-		<?php //endforeach;?>
-		
-
-		
-
-		
-		
-		
+		</div>	
 	</div>
 </section>
+<?php endif;?>
 <a href="#all_posts" id="tap2allpost"><i class="fa fa-sort"></i></a>
 <section class="row all_posts" id="all_posts">
 	<div class="post_sizer"></div> <!--This is not a post-->

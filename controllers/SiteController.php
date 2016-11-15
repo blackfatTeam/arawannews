@@ -8,7 +8,10 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
-
+use app\models\Contents;
+use app\models\Online;
+use app\lib\Workflow;
+use app\lib\OnlineConfig;
 class SiteController extends Controller
 {
     /**
@@ -60,7 +63,41 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+    	$section = 'bkk';
+    	
+    	$query = Online::find();
+    	$query->andWhere('web = :web', [':web' => $section]);
+    	$arrOnline = $query->all();
+    	
+    	$model = [];
+    	if (!empty($arrOnline)){
+    		foreach ($arrOnline as $lst){
+    			$contents = null;
+    			if ($lst->type == Workflow::TYPE_CONTENT){
+    				$contents = Contents::find()->where(['id'=>$lst->contentId])->one();
+    			}elseif ($lst->type == Workflow::TYPE_GALLARY){
+    				$contents = Gallary::find()->where(['id'=>$lst->contentId])->one();
+    			}
+    			
+    			if (!empty($contents)){
+    				if ($contents->status == Workflow::STATUS_PUBLISHED){
+		    			$model[$lst->section][] = [
+		    					'id' => $contents->id,
+		    					'title' => $contents->title,
+		    					'abstract' => $contents->abstract,
+		    					'orderNo' => $lst->orderNo,
+		    					'type' => $lst->type,
+		    					'publishTime' => $contents->publishTime
+		    			];
+    				}
+    			}
+    		}
+    	}
+
+    	
+        return $this->render('index', [
+        		'model' => $model
+        ]);
     }
 
     /**

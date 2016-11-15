@@ -52,7 +52,7 @@ $baseUriCss = $baseUri.'/assets/theme';
     <!--Theme Styles-->
     <link rel="stylesheet" href="<?= $baseUriCss?>/css/default/style.css">
     <link rel="stylesheet" href="<?= $baseUriCss?>/css/responsive/responsive.css">
-    
+    <link rel="stylesheet" href="<?= $baseUri?>/assets/custom.css">
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -95,7 +95,7 @@ $baseUriCss = $baseUri.'/assets/theme';
     <script src="<?= $baseUriCss?>/vendors/flexslider/jquery.flexslider-min.js"></script>
     
     <!--Magnific Popup-->
-    <script src="<?= $baseUriCss?>/js/jquery.magnific-popup.min.js"></script>
+    <script src="<?= $baseUriCss?>/js/jquery.magnific-popup.js"></script>
     
     <!--Instafeed-->
     <script src="<?= $baseUriCss?>/vendors/instafeed/instafeed.min.js"></script>
