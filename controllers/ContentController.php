@@ -20,7 +20,7 @@ class ContentController extends Controller
     public function actionIndex()
     {
     	$id = \Yii::$app->request->get('id');
-    	$id = 18;
+    	$id = 1;
     	$thumbnail = null;
     	$relateContent = [];
     	$content = Contents::findOne($id);

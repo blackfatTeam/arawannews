@@ -24,6 +24,7 @@ $baseUriCss = $baseUri.'/assets/theme';
 						<h2 class="title">
 							<a class="dropShadow" href="single-blog.html"><?php echo $lst['title']?></a>
 						</h2>
+						<p class="dropShadow"><?php echo $lst['abstract']?></p>
 						<ul class="post_meta nav nav-pills">
 							<li><a href="#"><?php echo DateUtil::th_date('j F Y, H:i น.', strtotime($lst['publishTime']))?></a></li>
 						</ul>
@@ -45,6 +46,7 @@ $baseUriCss = $baseUri.'/assets/theme';
 						<h2 class="title">
 							<a href="single-blog.html"><?php echo $lst['title']?></a>
 						</h2>
+						<p class="dropShadow"><?php echo $lst['abstract']?></p>
 						<ul class="post_meta nav nav-pills">
 							<li><a href="#"><?php echo DateUtil::th_date('j F Y, H:i น.', strtotime($lst['publishTime']))?></a></li>
 						</ul>
@@ -66,6 +68,7 @@ $baseUriCss = $baseUri.'/assets/theme';
 						<h2 class="title">
 							<a href="single-blog.html"><?php echo $lst['title']?></a>
 						</h2>
+						<p class="dropShadow"><?php echo $lst['abstract']?></p>
 						<ul class="post_meta nav nav-pills">
 							<li><a href="#"><?php echo DateUtil::th_date('j F Y, H:i น.', strtotime($lst['publishTime']))?></a></li>
 						</ul>
@@ -110,7 +113,7 @@ $baseUriCss = $baseUri.'/assets/theme';
                     </ul>                    
                 </div>
             </div>
-        </div><!--Post-->
+        </div>
         <div class="col-sm-3 post post-1">
             <div class="row m0 inner">
                 <div class="row m0 featured_img">
@@ -138,7 +141,7 @@ $baseUriCss = $baseUri.'/assets/theme';
                     </ul>                    
                 </div>
             </div>
-        </div><!--Post-->
+        </div>
         
         <div class="col-sm-3 post post-11 link">
             <div class="row m0 inner">

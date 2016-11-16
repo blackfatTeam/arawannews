@@ -67,10 +67,12 @@ class SiteController extends Controller
     	
     	$query = Online::find();
     	$query->andWhere('web = :web', [':web' => $section]);
+    	$query->andWhere(['in','orderNo',[1,2,3]]);
     	$arrOnline = $query->all();
     	
     	$model = [];
     	if (!empty($arrOnline)){
+
     		foreach ($arrOnline as $lst){
     			$contents = null;
     			if ($lst->type == Workflow::TYPE_CONTENT){
@@ -81,7 +83,13 @@ class SiteController extends Controller
     			
     			if (!empty($contents)){
     				if ($contents->status == Workflow::STATUS_PUBLISHED){
-		    			$model[$lst->section][] = [
+    					if ($lst->section == 'home'){
+    						$key = 'home';
+    					}else{
+    						$key = 'other';
+    					}
+    				
+		    			$model[$key][] = [
 		    					'id' => $contents->id,
 		    					'title' => $contents->title,
 		    					'abstract' => $contents->abstract,
