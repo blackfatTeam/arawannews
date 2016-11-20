@@ -11,6 +11,7 @@ use app\models\ContactForm;
 use app\models\Contents;
 use app\models\Media;
 use app\lib\Workflow;
+use yii\helpers\Url;
 use app\models\Relatecontent;
 use yii\helpers\ArrayHelper;
 
@@ -19,11 +20,22 @@ class ContentController extends Controller
 
     public function actionIndex()
     {
-    	$id = \Yii::$app->request->get('id');
-    	$id = 29;
+    	$postTitle = \Yii::$app->request->get('postTitle');
+
     	$thumbnail = null;
     	$relateContent = [];
-    	$content = Contents::findOne($id);
+    	
+    	$currentTime = date('Y-m-d H:i:s');
+    	$query = Contents::find();
+    	$query->andWhere('postTitle = :postTitle', [':postTitle' => $postTitle]);
+    	$query->andWhere('status = :status', [':status' => Workflow::STATUS_PUBLISHED]);
+    	$query->andWhere('publishTime <= :publishTime', [':publishTime' => $currentTime]);
+    	$content = $query->one();
+    	if (empty($content)) {
+    		echo $this->redirect(Url::toRoute(['site/error']));
+    	}
+    	
+    	
     	if($content){
     		$thumbnail = Media::findOne([$content->thumbnail]);
     		$models = Relatecontent::find()->where(['contentId'=>$content->id,'type'=>Workflow::TYPE_CONTENT])->all();
@@ -43,10 +55,19 @@ class ContentController extends Controller
     		}
     	}
 
+    	if (!empty($content->tags)){
+
+    		$arrTags = explode(',', $content->tags);
+    		if (empty($arrTags)){
+    			$arrTags = [];
+    		}
+    	}
+    	
         return $this->render('index',[
         		'content'=>$content,
         		'thumbnail'=>$thumbnail,
-        		'relateContent'=>$relateContent
+        		'relateContent'=>$relateContent,
+        		'arrTags' => $arrTags
         ]);
     }
 }

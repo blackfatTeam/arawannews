@@ -9,20 +9,9 @@ $baseUriCss = $baseUri . '/assets/theme';
 	
 	
 	<div class="row m0 inner">
-		
 		<div class="post_inner row m0">
                             <div class="row m0 category politics">
-                                <a href="#">politics</a>
-                                <div class="dropdown pull-right social_share_drop">
-                                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i class="fa fa-ellipsis-v"></i>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
-                                        <li><a href="#"><i class="fa fa-google-plus"></i> Google Plus</a></li>
-                                    </ul>
-                                </div>                                
+                                <a href="#">politics</a>                              
                                 <ul class="post_meta nav nav-pills">
                                     <li><i class="fa fa-calendar-check-o" aria-hidden="true"></i> เผยแพร่เมื่อ: <?php echo DateUtil::th_date('d M Y, H:i น.',strtotime($content->publishTime))?></li>
       
@@ -31,10 +20,11 @@ $baseUriCss = $baseUri . '/assets/theme';
                             <h3 class="post_title"><?php echo $content->title?></h3>
                             
                         </div>
-		
+
 		<div class="post_inner row m0">
 			<div class="post_content row m0">
 				<img src="<?php echo $thumbnail->fullPath?>" alt=""class="img-responsive">
+				<br>
 				<?php echo $content->content?>
 			</div>
 		</div>

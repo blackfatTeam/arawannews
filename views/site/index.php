@@ -1,6 +1,7 @@
 <?php
 use app\lib\OnlineConfig;
 use app\lib\DateUtil;
+use app\lib\Workflow;
 $baseUri = Yii::getAlias('@web');
 $baseUriCss = $baseUri.'/assets/theme';
 ?>
@@ -22,7 +23,7 @@ $baseUriCss = $baseUri.'/assets/theme';
 							<a href="#">111</a>
 						</h4>
 						<h2 class="title">
-							<a class="dropShadow" href="single-blog.html"><?php echo $lst['title']?></a>
+							<a class="dropShadow" href="<?php echo Workflow::getLink($lst)?>"><?php echo $lst['title']?></a>
 						</h2>
 						<p class="dropShadow"><?php echo $lst['abstract']?></p>
 						<ul class="post_meta nav nav-pills">
@@ -44,7 +45,7 @@ $baseUriCss = $baseUri.'/assets/theme';
 							<a href="#">22222</a>
 						</h4>
 						<h2 class="title">
-							<a href="single-blog.html"><?php echo $lst['title']?></a>
+							<a href="<?php echo Workflow::getLink($lst)?>"><?php echo $lst['title']?></a>
 						</h2>
 						<p class="dropShadow"><?php echo $lst['abstract']?></p>
 						<ul class="post_meta nav nav-pills">
@@ -66,7 +67,7 @@ $baseUriCss = $baseUri.'/assets/theme';
 							<a href="#">3333</a>
 						</h4>
 						<h2 class="title">
-							<a href="single-blog.html"><?php echo $lst['title']?></a>
+							<a href="<?php echo Workflow::getLink($lst)?>"><?php echo $lst['title']?></a>
 						</h2>
 						<p class="dropShadow"><?php echo $lst['abstract']?></p>
 						<ul class="post_meta nav nav-pills">
@@ -83,14 +84,19 @@ $baseUriCss = $baseUri.'/assets/theme';
 </section>
 <?php endif;?>
 <a href="#all_posts" id="tap2allpost"><i class="fa fa-sort"></i></a>
+<?php if (!empty($model['others'])):?>
 <section class="row all_posts" id="all_posts">
 	<div class="post_sizer"></div> <!--This is not a post-->
 		
+        <?php foreach ($model['others'] as $lst):?>
         
+        <?php if ($lst['theme'] == 1){?>
         <div class="col-sm-3 post post-1">
             <div class="row m0 inner">
                 <div class="row m0 featured_img">
-                    <a href="single-blog.html"><img src="<?= $baseUriCss?>/images/posts/1.jpg" alt=""></a>
+                    <a href="single-blog.html">
+                    <?php echo Workflow::getThumbnail($lst)?>
+                    </a>
                 </div>
                 <div class="row m0 post_contents">
                     <div class="row m0 category politics">
@@ -108,36 +114,22 @@ $baseUriCss = $baseUri.'/assets/theme';
                             </ul>
                         </div>
                     </div>
-                    <h3 class="post_title"><a href="#">what happend this week? take our weekly news quiz</a></h3>
+                    <h3 class="post_title"><a href="<?php echo Workflow::getLink($lst)?>"><?php echo $lst['title']?></a></h3>
                     <ul class="post_meta nav nav-pills">
-                        <li><a href="#">August 6, 2015</a></li>
+                        <li><?php echo DateUtil::th_date('j F Y, H:i น.', strtotime($lst['publishTime']))?></li>
                     </ul>                    
                 </div>
             </div>
         </div>
         
-        <div class="col-sm-3 post post-11 link">
-            <div class="row m0 inner">
-                <img src="<?= $baseUriCss?>/images/posts/9.jpg" alt="">
-                <div class="row m0 post_contents">
-                    <h4 class="category politics"><a href="#">politics</a></h4>
-                    <h3 class="post_title"><a href="#">Deadly infections from medical scopes go unreported, raising health risks</a></h3>
-                    <ul class="post_meta nav nav-pills">
-                        <li><a href="#">August 6, 2015</a></li>
-                    </ul>                    
-                </div>
-            </div>
-        </div>
         
+        <?php }elseif ($lst['theme'] == 2){?>
         
         <div class="col-sm-3 post post-9">
             <div class="row m0 inner">
                 <div class="row m0 featured_img">
                     <div class="owl-carousel post_dot_gallery">
-                        <div class="item"><img src="<?= $baseUriCss?>/images/posts/7.jpg" alt=""></div>
-                        <div class="item"><img src="<?= $baseUriCss?>/images/posts/7.jpg" alt=""></div>
-                        <div class="item"><img src="<?= $baseUriCss?>/images/posts/7.jpg" alt=""></div>
-                        <div class="item"><img src="<?= $baseUriCss?>/images/posts/7.jpg" alt=""></div>
+                    	<?php echo Workflow::getThumbnailGallery($lst)?>
                     </div>
                 </div>
                 <div class="row m0 post_contents">
@@ -156,15 +148,28 @@ $baseUriCss = $baseUri.'/assets/theme';
                             </ul>
                         </div>
                     </div>
-                    <h3 class="post_title"><a href="#">Autopsy: St. Louis man killed by police was shot in back</a></h3>
+                    <h3 class="post_title"><a href="#"><?php echo $lst['title']?></a></h3>
                     <ul class="post_meta nav nav-pills">
-                        <li><a href="#">August 6, 2015</a></li>
-                        <li><a href="#"><i class="fa fa-thumbs-o-up"></i>1456</a></li>
-                        <li><a href="#"><i class="fa fa-commenting"></i>32</a></li>
+                        <li><?php echo DateUtil::th_date('j F Y, H:i น.', strtotime($lst['publishTime']))?></li>
                     </ul>                    
                 </div>
             </div>
         </div><!--Post-->
+        <?php }?>
+        <?php endforeach;	?>
+        <!--  <div class="col-sm-3 post post-11 link">
+            <div class="row m0 inner">
+                <img src="<?php //echo $baseUriCss?>/images/posts/9.jpg" alt="">
+                <div class="row m0 post_contents">
+                    <h4 class="category politics"><a href="#">politics</a></h4>
+                    <h3 class="post_title"><a href="#">Deadly infections from medical scopes go unreported, raising health risks</a></h3>
+                    <ul class="post_meta nav nav-pills">
+                        <li><a href="#">August 6, 2015</a></li>
+                    </ul>                    
+                </div>
+            </div>
+        </div>-->
         
    
 </section>  
+<?php endif;?>

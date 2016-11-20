@@ -17,20 +17,20 @@ $uri = Yii::$app->controller->getRoute ();
 </style>
 <div class="slideMenuClose"></div>
 
-<section class="preloader preloader2 row">
+<!--  <section class="preloader preloader2 row">
 	<div class="before_half row m0"></div>
 	<div class="after_half row m0"></div>
 	<div class="row m0 content">
 		<div class="circle">
 			<div class="red">
 				<div class="rotator">
-					<img src="<?= $baseUriCss?>/images/curve.png" alt="">
+					<img src="<?php //echo $baseUriCss?>/images/curve.png" alt="">
 				</div>
 				<a href="#" class="logo">age</a>
 			</div>
 		</div>
 	</div>
-</section>
+</section>-->
 
 <header class="row header1" id="header">
 	<nav class="navbar navbar-default navbar-fixed-top">
@@ -41,7 +41,7 @@ $uri = Yii::$app->controller->getRoute ();
 					<div id="slideMenu_trigger">
 						<img src="<?= $baseUriCss?>/images/navigation/logo/bars.png" alt="">
 					</div>
-					<a class="navbar-brand" href="index.html"
+					<a class="navbar-brand" href="<?php echo Url::toRoute(['/']);?>"
 						title="Age - Well Featured Magazine Template">Age</a>
 				</div>
 			</div>
@@ -84,7 +84,7 @@ $uri = Yii::$app->controller->getRoute ();
 								<?php endforeach;?>
 							</ul>
 						</li>
-						<li><a href="javascript:;">หน้าหลัก</a></li>
+						<li><a href="<?php echo Url::toRoute(['/']);?>">หน้าหลัก</a></li>
 						
 					</ul>
 				</div>

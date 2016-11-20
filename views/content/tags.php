@@ -2,12 +2,13 @@
 $baseUri = Yii::getAlias ( '@web' );
 $baseUriCss = $baseUri . '/assets/theme';
 ?>
+<?php if (!empty($arrTags)):?>
 <div class="row m0 post_tags">
 	<h3 class="heading">tags</h3>
 	<div class="tag_row">
-		<a href="#" class="tag">business</a> <a href="#" class="tag">technology</a>
-		<a href="#" class="tag">photography</a> <a href="#" class="tag">electronics</a>
-		<a href="#" class="tag">entertainment</a> <a href="#" class="tag">fashion</a>
-		<a href="#" class="tag">education</a> <a href="#" class="tag">places</a>
+		<?php foreach ($arrTags as $lst):?>
+		<a href="#" class="tag"><?php echo $lst?></a>
+		<?php endforeach;?>
 	</div>
 </div>
+<?php endif;?>

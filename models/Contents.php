@@ -1,7 +1,7 @@
 <?php
 
 namespace app\models;
-
+use app\lib\Workflow;
 use Yii;
 
 /**

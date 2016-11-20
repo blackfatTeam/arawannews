@@ -86,17 +86,21 @@ class SiteController extends Controller
     					if ($lst->section == 'home'){
     						$key = 'home';
     					}else{
-    						$key = 'other';
+    						$key = 'others';
     					}
     				
 		    			$model[$key][] = [
 		    					'id' => $contents->id,
 		    					'title' => $contents->title,
 		    					'abstract' => $contents->abstract,
+		    					'thumbnail' => $contents->thumbnail,
 		    					'orderNo' => $lst->orderNo,
 		    					'type' => $lst->type,
-		    					'publishTime' => $contents->publishTime
+		    					'publishTime' => $contents->publishTime,
+		    					'theme' => $contents->theme,
+		    					'postTitle' => $contents->postTitle
 		    			];
+    					
     				}
     			}
     		}

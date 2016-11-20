@@ -9,9 +9,11 @@ img{
 }
 </style>
 <!-- last update -->
+<?php if(false):?>
 <?php echo yii\base\View::render('lastupdate', [
 
 ]); ?>
+<?php endif;?>
 <!-- <section class="row special_projects" id="projects">
         <div class="media">
             <div class="media-left">special projects</div>
@@ -33,7 +35,7 @@ img{
     </section> -->
 
 <!--Blog Section Here-->
-<section class="row">
+<section class="row" style="margin-top: 30px;">
 	<div class="container-fluid">
 		<div class="row">
 
@@ -57,7 +59,7 @@ img{
 			
 				<!--tags-->
 				<?= yii\base\View::render('tags', [
-	
+					'arrTags' => $arrTags
 				]); ?>
 				
 			</div>

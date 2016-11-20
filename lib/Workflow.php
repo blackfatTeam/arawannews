@@ -297,4 +297,63 @@ class Workflow {
 			BaseFileHelper::removeDirectory($dir);
 		}
 	}
+	
+	//ดึงรูปภาพมาแสดงเป็น thumbnail แบบคละ size
+	public static function getThumbnail($data){
+		$baseUrl = \Yii::getAlias('@web');
+		if (!empty($data['thumbnail'])){
+			$id = $data['thumbnail'];
+		
+			$query = Media::find();
+			$query->andWhere('id = :id', [':id' => $id]);
+			$resultMedia = $query->one();
+			if (!empty($resultMedia)) {
+				$arrMedia = json_decode($resultMedia->thumbPath, true);
+				if ($arrMedia[Workflow::SIZE_MID]) {
+					$result = '<img src="'.$arrMedia[Workflow::SIZE_MID].'">';
+				}
+			}
+		}else{
+			$result = '<img src="'.$baseUrl.'/assets/img/no-thumbnail.jpg"'.'>';
+		}
+		 
+		return $result;
+	}
+	
+	//ดึงรูปภาพมาแสดงเป็น thumbnail แบบ Gallery
+	public static function getThumbnailGallery($data){
+		$baseUrl = \Yii::getAlias('@web');
+		
+		$arrResult = '';
+		if (!empty($data)){
+			$id = $data['id'];
+	
+			$query = Media::find();
+			$query->andWhere('refId = :refId', [':refId' => $id]);
+			$resultMedia = $query->all();
+
+			if (!empty($resultMedia)) {
+				
+				foreach ($resultMedia as $lst){
+					$arrMedia = json_decode($lst->thumbPath, true);
+					if ($arrMedia[Workflow::SIZE_MID]) {
+						$arrResult .= '<div class="item"><img src="'.$arrMedia[Workflow::SIZE_MID].'"></div>';
+					}else{
+						$arrResult .= '<div class="item"><img src="'.$baseUrl.'/assets/img/no-thumbnail.jpg"'.'></div>';
+					}
+				}
+			}
+		}else{
+			$arrResult .= '<img src="'.$baseUrl.'/assets/img/no-thumbnail.jpg"'.'>';
+		}
+
+		return $arrResult;
+	}
+	
+	//gen url ลิ้งไปหน้าอ่านข่าว
+	public static function getLink($data){
+		$postTitle = $data['postTitle'];
+		$linkUrl = Url::toRoute(['content/'.$postTitle]);
+		return $linkUrl;
+	}
 }
