@@ -142,54 +142,7 @@ $uri = Yii::$app->controller->getRoute ();
 			</div>
 		</div>
 	</div>
-	<div class="row m0 latest_discussions">
-		<h3 class="widgetTitle">latest discussions</h3>
-		<div class="media discussion">
-			<div class="media-left">
-				<a href="#" class="auther_pic"><img
-					src="<?= $baseUriCss?>/images/posts/discussion/1.jpg" alt=""></a> <a href="#"
-					class="reply_btn">reply</a>
-			</div>
-			<div class="media-body">
-				<h5>
-					3 min ago <i>by Jenifer Lorex</i>
-				</h5>
-				<p>Nullam accumsan lorem in dui. Cras ultricies mi eu turpis
-					hendrerit fringilla...</p>
-			</div>
-		</div>
-		<!--Discussion-->
-		<div class="media discussion">
-			<div class="media-left">
-				<a href="#" class="auther_pic"><img
-					src="<?= $baseUriCss?>/images/posts/discussion/2.jpg" alt=""></a> <a href="#"
-					class="reply_btn">reply</a>
-			</div>
-			<div class="media-body">
-				<h5>
-					24 min ago <i>by Lina Dalas</i>
-				</h5>
-				<p>Nullam accumsan lorem in dui. Cras ultricies mi eu turpis
-					hendrerit fringilla...</p>
-			</div>
-		</div>
-		<!--Discussion-->
-		<div class="media discussion">
-			<div class="media-left">
-				<a href="#" class="auther_pic"><img
-					src="<?= $baseUriCss?>/images/posts/discussion/3.jpg" alt=""></a> <a href="#"
-					class="reply_btn">reply</a>
-			</div>
-			<div class="media-body">
-				<h5>
-					30 min ago <i>by Keyden Cross</i>
-				</h5>
-				<p>Nullam accumsan lorem in dui. Cras ultricies mi eu turpis
-					hendrerit fringilla...</p>
-			</div>
-		</div>
-		<!--Discussion-->
-	</div>
+	
 	<div class="row m0 categories">
 		<h3 class="widgetTitle">categories</h3>
 		<ul class="nav">
