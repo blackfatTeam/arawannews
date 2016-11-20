@@ -92,13 +92,13 @@
         /*----------------------------------------------------*/
         /*  Instafeed
         /*----------------------------------------------------*/
-        var feed = new Instafeed({
+        /*var feed = new Instafeed({
             get: 'popular',
             limit: 9,
             clientId: '489097d3abcf4dd285d6feb8d0dd83e9',
             template: '<li><a href="{{link}}" class="insta_img"><img src="{{image}}" /></a><li>'
         });
-        feed.run();  
+        feed.run();  */
         
         /*----------------------------------------------------*/
         /*  Related Post Carousel

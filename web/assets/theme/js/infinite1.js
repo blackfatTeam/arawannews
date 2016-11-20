@@ -31,13 +31,14 @@
             navSelector : '#page_nav a:last',    // selector for the paged navigation 
             nextSelector: '#page_nav a:last',  // selector for the NEXT link (to page 2)
             itemSelector: '#all_posts .post',     // selector for all items you'll retrieve
+  
             loading: {
                 finished: undefined,
                 finishedMsg: "<em>Congratulations, you've reached the end of the internet.</em>",
                 msgText: "<em>Loading the next set of posts...</em>",
                 selector: null,
                 speed: 'slow',
-                start: undefined
+                start: undefined,
             }
         },
         // call Isotope as a callback
@@ -46,13 +47,14 @@
         });
         
         // kill scroll binding
-        $(window).unbind('.infscr');
+       //$(window).unbind('.infscr');
 
         // hook up the manual click guy.
         $('#page_nav a').on("click",function(){
             $container.infinitescroll('retrieve');
             return false
         });
+        
 
         // remove the paginator when we're done.
         $(document).ajaxError(function(e,xhr,opt){

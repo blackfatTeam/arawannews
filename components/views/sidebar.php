@@ -2,6 +2,7 @@
 use app\lib\OnlineConfig;
 use common\models\User;
 use yii\helpers\Html;
+use yii\helpers\Url;
 $identity = \Yii::$app->user->getIdentity ();
 $baseUri = \Yii::getAlias ( '@web' );
 $baseUriCss = $baseUri . '/assets/theme';
@@ -46,9 +47,9 @@ $uri = Yii::$app->controller->getRoute ();
 			</div>
 
 			<div class="follow_nav fleft">
-				<div class="fleft menuTitle"><a href="#" class="hotTopicMenu">จำนำข้าว</a></div>
-				<div class="fleft menuTitle"><a href="#" class="hotTopicMenu">เลือกตั้งสหรัฐอเมริกา</a></div>
-				<div class="fleft menuTitle"><a href="#" class="hotTopicMenu">ประชามติ</a></div>
+				<?php foreach($hotTopic as $hot){?>
+				<div class="fleft menuTitle"><a href="<?php echo Url::to(['tags/index','q'=>$hot->title])?>" class="hotTopicMenu"><?php echo $hot->title?></a></div>
+				<?php }?>
 				<!-- <ul class="nav nav-pills">
 					<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
 					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
