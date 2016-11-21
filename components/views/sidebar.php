@@ -63,7 +63,7 @@ $uri = Yii::$app->controller->getRoute();
 				<!-- <div class="fleft current_date"></div> -->
 				<div class="fright search_dot">
 					<ul class="nav navbar-nav">
-						<li><a href="search-form.html" id="search_form"><i
+						<li><a href="javascript:;" data-toggle="modal" data-target="#myModal" ><i
 								class="fa fa-search"></i></a></li>
 						<li><a href="#" id="scrollSpyTrigger"><img
 								src="<?= $baseUriCss?>/images/navigation/dot.png" alt=""></a></li>
@@ -95,3 +95,29 @@ $uri = Yii::$app->controller->getRoute();
 		<!-- /.container-fluid -->
 	</nav>
 </header>
+
+<!-- Modal -->
+<section class="row search_form_popup modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4">
+				<h2>
+					I�m Agesxx <br>magazine &amp; Blog
+				</h2>
+				<a href="about.html"><i class="fa fa-info-circle"></i>get more info</a>
+			</div>
+			<div class="col-sm-8">
+				<form action="<?php echo Url::to(['search/index'])?>" type="GET" class="row m0">
+					<div class="input-group">
+						<input type="search" name="q" class="form-control"
+							placeholder="Search"> <span class="input-group-addon">
+							<button type="submit">
+								<i class="fa fa-search"></i>
+							</button>
+						</span>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
