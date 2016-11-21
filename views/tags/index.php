@@ -44,7 +44,7 @@ $this->registerCss($css);
                 </div>
                 <div class="row m0 post_contents">
                     <div class="row m0 category politics">
-                        <a href="#">politics</a>
+                        <a href="#"><?php echo isset(Workflow::$arrCategory[$model->categoryId])?Workflow::$arrCategory[$model->categoryId]:''?></a>
                         <div class="dropdown pull-right social_share_drop">
                             <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fa fa-ellipsis-v"></i>
@@ -105,7 +105,14 @@ $this->registerCss($css);
         
 </section>
 
-<nav id="page_nav" class="row m0">
-<a href="<?= Url::to(['tags/index','q'=>$q,'offset'=>$offset+5])?>"><i class="fa fa-refresh"></i></a>
-<span>Read More</span>
-</nav>
+<div class="row">
+	<div class="col-md-12">
+		<div class=" pull-right">
+		<?php 
+		echo LinkPager::widget([
+		    'pagination' => $pages,
+		]);
+		?>
+		</div>
+	</div>
+</div>

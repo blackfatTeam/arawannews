@@ -12,6 +12,7 @@ use app\lib\Workflow;
 use app\models\Relatecontent;
 use yii\helpers\ArrayHelper;
 use yii\data\Pagination;
+use yii\data\ActiveDataProvider;
 
 class TagsController extends Controller
 {
@@ -20,6 +21,9 @@ class TagsController extends Controller
     {
     	$q = Yii::$app->request->get('q','');
     	$offset = Yii::$app->request->get('offset',0);
+    	if($offset<0){
+    		$offset = 0;
+    	}
     	
     	$query = Contents::find();
     	$query->where(['like','tags',$q]);
@@ -30,18 +34,19 @@ class TagsController extends Controller
     	
     	$countQuery = clone $query;
     	$pages = new Pagination(['totalCount' => $countQuery->count()]);
-    	$pages->setPageSize(5);
-
-    	$models = $query->offset($offset)
+    	$pages->setPageSize(8);
+    	$models = $query
+    	->offset($pages->offset)
     	->limit($pages->limit)
     	->all();
     	
+
     	
         return $this->render('index',[
         		'q'=>$q,
         		'models'=>$models,
         		'pages'=>$pages,
-        		'offset'=>$offset
+        		'offset'=>$offset 
         ]);
     }
 }
