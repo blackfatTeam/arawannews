@@ -25,8 +25,13 @@ class TagsController extends Controller
     		$offset = 0;
     	}
     	
+    	$arrQ = explode(',', $q);
+    	
     	$query = Contents::find();
-    	$query->where(['like','tags',$q]);
+    	foreach($arrQ as $q){
+    		$query->orWhere(['like','tags',$q]);
+    	}
+    	
     	$query->andWhere(['status'=>Workflow::STATUS_PUBLISHED]);
     	$query->andWhere(['<','publishTime',date('Y-m-d H:i:s',time())]);
     	$query->orderBy('publishTime desc');

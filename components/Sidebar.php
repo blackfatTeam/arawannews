@@ -16,7 +16,6 @@ class Sidebar extends Widget {
 				
 		$web = 'bkk';
 		$hotTopic = Hottopic::find()->where(['web'=>$web,'status'=>\app\lib\Workflow::HOTTOPIC_STATUS_PUBLISHED])->orderBy('orderNo asc')->all();
-		
 		echo $this->render('sidebar',[
 				'web'=>$web,
 				'hotTopic'=>$hotTopic

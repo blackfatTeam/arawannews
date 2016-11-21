@@ -48,7 +48,7 @@ $uri = Yii::$app->controller->getRoute();
 
 			<div class="follow_nav fleft">
 				<?php foreach($hotTopic as $hot){?>
-				<div class="fleft menuTitle"><a href="<?php echo Url::to(['tags/index','q'=>$hot->title])?>" class="hotTopicMenu"><?php echo $hot->title?></a></div>
+				<div class="fleft menuTitle"><a href="<?php echo Url::to(['tags/index','q'=>$hot->tags])?>" class="hotTopicMenu"><?php echo $hot->title?></a></div>
 				<?php }?>
 				<!-- <ul class="nav nav-pills">
 					<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
