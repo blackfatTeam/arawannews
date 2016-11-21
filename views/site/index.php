@@ -2,6 +2,7 @@
 use app\lib\OnlineConfig;
 use app\lib\DateUtil;
 use app\lib\Workflow;
+use yii\bootstrap\Html;
 $baseUri = Yii::getAlias('@web');
 $baseUriCss = $baseUri.'/assets/theme';
 ?>
@@ -17,7 +18,12 @@ $baseUriCss = $baseUri.'/assets/theme';
 				<?php if (!empty($arrModel)):?>
 				<?php foreach ($arrModel as $lst):?>
 				<div class="row inner">
-					<img src="<?= $baseUriCss?>/images/posts/features/1.jpg" alt="" class="featured-img">
+					<?php echo Html::img(Workflow::getUripreview([
+		'width'=>300,
+		'height'=>300,
+		'wartermark'=>'',
+		'mediaId'=>$lst['thumbnail']]),['class'=>'featured-img'])?>
+					<!-- <img src="<?php //echo $baseUriCss?>/images/posts/features/1.jpg" alt="" class="featured-img"> -->
 					<div class="row m0 content">
 						<h4 class="category politics">
 							<a href="#">111</a>
