@@ -1,11 +1,11 @@
-/*;(function($) {
+;(function($) {
     "use strict";
     
     $(window).load(function(){
         
-        ----------------------------------------------------
-          Istope and Infinite Scroll
-        /*----------------------------------------------------
+        /*----------------------------------------------------*/
+        /*  Istope and Infinite Scroll
+        /*----------------------------------------------------*/
         var $container = $('#all_posts');
 
         $container.imagesLoaded().progress( function() {
@@ -92,4 +92,4 @@
         
     })
     
-})(jQuery)*/
+})(jQuery)
