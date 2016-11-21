@@ -118,6 +118,18 @@ class Workflow {
 	];
 	
 	/*------------------------------Media----------------------------*/
+	public static function getUripreview($option = []){	
+		$mId = $option['mediaId'];
+		$w = $option['width'];
+		$h = $option['height'];
+		$wtm = $option['wartermark'];
+	
+		//$baseUrl = \Yii::getAlias('@webUrl');
+		$baseUrl = 'http://localhost/arawannews/web';		
+		return $baseUrl.'/'.'media/genmedia'.'?'.'w='.$w.'&'.'h='.$h.'&'.'wtm='.$wtm.'&'.'mId='.$mId;
+	
+	}
+	
 	const UPLOAD_FOLDER='uploads';
 	const UPLOAD_IMAGES_FOLDER = 'images';
 	const UPLOAD_THUMBNAIL_FOLDER ='thumbnail';
