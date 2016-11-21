@@ -3,6 +3,7 @@ use app\lib\OnlineConfig;
 use app\lib\DateUtil;
 use yii\helpers\Url;
 use yii\widgets\LinkPager;
+use app\lib\Workflow;
 $baseUri = Yii::getAlias('@web');
 $baseUriCss = $baseUri.'/assets/theme';
 
@@ -31,11 +32,15 @@ $this->registerCss($css);
 <hr>
 <section class="row all_posts" id="all_posts">
 	<div class="post_sizer"></div> <!--This is not a post-->
-		<?php foreach($list as $item){?>
+		<?php foreach($models as $model){?>
         <div class="col-sm-3 post post-1">
             <div class="row m0 inner">
                 <div class="row m0 featured_img">
-                    <a href="single-blog.html"><img src="<?= $item['thumbnailPath']?>" alt=""></a>
+                    <a href="single-blog.html"><img src="<?= Workflow::getUripreview([
+                    		'width'=>250,
+                    		'height'=>250,
+                    		'mediaId'=>$model->thumbnail
+                    ])?>" alt=""></a>
                 </div>
                 <div class="row m0 post_contents">
                     <div class="row m0 category politics">
@@ -53,9 +58,9 @@ $this->registerCss($css);
                             </ul>
                         </div>
                     </div>
-                    <h3 class="post_title"><a href="#"><?php echo $item['title']?></a></h3>
+                    <h3 class="post_title"><a href="#"><?php echo $model->title?></a></h3>
                     <ul class="post_meta nav nav-pills">
-                        <li><a href="#"><?php echo date(DateUtil::th_date('d M Y',strtotime($item['publishTime'])))?></a></li>
+                        <li><a href="#"><?php echo date(DateUtil::th_date('d M Y',strtotime($model->publishTime)))?></a></li>
                     </ul>                    
                 </div>
             </div>

@@ -22,7 +22,7 @@ class MediaController extends Controller
 		$mId = \Yii::$app->request->get('mId');
 	
 		$mediaId = $mId;
-		$wartermark = $wtm;
+		$watermark = $wtm;
 		$width =  $w;
 		$height = $h;
 	
@@ -38,14 +38,18 @@ class MediaController extends Controller
 	
 			if(!empty($width)&&!empty($height)){
 				$image->resize($width,$height,\yii\image\drivers\Image::CROP);
+			}elseif(!empty($width)){
+				$image->resize($width,$height,\yii\image\drivers\Image::WIDTH);
+			}elseif(!empty($height)){
+				$image->resize($width,$height,\yii\image\drivers\Image::HEIGHT);
 			}
 	
 	
-			if(!empty($option['wartermark'])){
-				$watermarkSrc = Workflow::$arrWaterMark[$option['wartermark']];
-				$watermark = Yii::$app->image->load($watermarkSrc);
-				$watermark->resize($image->width,$image->height,\yii\image\drivers\Image::CROP);
-				$image->watermark($watermark, NULL, NULL, 50);
+			if(!empty($watermark)){
+				$watermarkSrc = Workflow::$arrWaterMark[$watermark];
+				$watermarkFile = Yii::$app->image->load($watermarkSrc);
+				$watermarkFile->resize($image->width,$image->height,\yii\image\drivers\Image::CROP);
+				$image->watermark($watermarkFile, NULL, NULL, 50);
 			}
 	
 			header("Content-Type: ".$image->mime);

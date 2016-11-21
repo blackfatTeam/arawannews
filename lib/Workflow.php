@@ -104,7 +104,6 @@ class Workflow {
 
 		
 	/*------------------------------Contents----------------------------*/
-	/*------------------------------Contents----------------------------*/
 	const CONTENT_TYPE_POL = 1;
 	const CONTENT_TYPE_SPORT = 2;
 	const CONTENT_TYPE_ENT = 3;
@@ -140,11 +139,11 @@ class Workflow {
 	];
 	
 	/*------------------------------Media----------------------------*/
-	public static function getUripreview($option = []){	
-		$mId = $option['mediaId'];
-		$w = $option['width'];
-		$h = $option['height'];
-		$wtm = $option['wartermark'];
+	public static function getUripreview($params = []){	
+		$mId = isset($params['mediaId'])?$params['mediaId']:null;
+		$w = isset($params['width'])?$params['width']:null;
+		$h = isset($params['height'])?$params['height']:null;
+		$wtm = isset($params['wartermark'])?$params['wartermark']:null;
 	
 		//$baseUrl = \Yii::getAlias('@webUrl');
 		$baseUrl = 'http://localhost/arawannews/web';		
@@ -273,7 +272,7 @@ class Workflow {
 	}
 	private function CreateDir($basePath = null,$folderName) {
 		if($basePath == null){
-			$basePath = Media::getUploadPath();
+			$basePath = Workflow::getUploadPath();
 		}
 		if ($folderName != NULL) {
 			 
@@ -286,8 +285,8 @@ class Workflow {
 	
 	private function createThumbnail($imgUpPath, $fileName, $width = 250) {
 	
-		$this->CreateDir($imgUpPath,Media::UPLOAD_THUMBNAIL_FOLDER);
-		$uploadPath = $imgUpPath.'/'.Media::UPLOAD_THUMBNAIL_FOLDER;
+		$this->CreateDir($imgUpPath,Workflow::UPLOAD_THUMBNAIL_FOLDER);
+		$uploadPath = $imgUpPath.'/'.Workflow::UPLOAD_THUMBNAIL_FOLDER;
 		$file = $imgUpPath .'/'. $fileName;
 	
 	

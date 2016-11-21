@@ -18,7 +18,7 @@ class TagsController extends Controller
 
     public function actionIndex()
     {
-    	$q = Yii::$app->request->get('q');
+    	$q = Yii::$app->request->get('q','');
     	$offset = Yii::$app->request->get('offset',0);
     	
     	$query = Contents::find();
@@ -36,26 +36,10 @@ class TagsController extends Controller
     	->limit($pages->limit)
     	->all();
     	
-
-    	$list = [];
-    	foreach($models as $index => $model){
-    		$list[$index] = $model->getAttributes()+['thumbnailPath'=>''];
-    		
-    		$media = Media::findOne([$model->thumbnail]);
-    		if($media){
-    			if($media->watermarkNo){
-    				$arrPath = json_decode($media->thumbPath);
-    				$list[$index]['thumbnailPath'] = $arrPath->{Workflow::SIZE_WATERMARK};
-    			}else{
-    				$arrPath = json_decode($media->thumbPath);
-    				$list[$index]['thumbnailPath'] = $arrPath->{Workflow::SIZE_MID};
-    			}
-    		}
-    	}
-
+    	
         return $this->render('index',[
         		'q'=>$q,
-        		'list'=>$list,
+        		'models'=>$models,
         		'pages'=>$pages,
         		'offset'=>$offset
         ]);
