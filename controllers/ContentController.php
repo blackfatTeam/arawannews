@@ -35,7 +35,7 @@ class ContentController extends Controller
     		echo $this->redirect(Url::toRoute(['site/error']));
     	}
     	
-    	
+    	$arrMedia = [];
     	if($content){
     		$thumbnail = Media::findOne([$content->thumbnail]);
     		$models = Relatecontent::find()->where(['contentId'=>$content->id,'type'=>Workflow::TYPE_CONTENT])->all();
@@ -53,6 +53,15 @@ class ContentController extends Controller
     					'thumbnail'=>$arrPath->{Workflow::SIZE_LIT}
     			];
     		}
+    		
+    		//ถ้าเป็น content gallery
+    		if ($content->theme == 2){
+    			$query = Media::find();
+    			$query->andWhere('refId = :refId', [':refId' => $content->id]);
+    			$query->andWhere('type = :type', [':type' => Workflow::TYPE_CONTENT]);
+    			$query->orderBy('id ASC');
+    			$arrMedia = $query->all();
+    		}
     	}
     	$arrTags = [];
     	if (!empty($content->tags)){
@@ -62,12 +71,14 @@ class ContentController extends Controller
     			$arrTags = [];
     		}
     	}
+
     	
         return $this->render('index',[
         		'content'=>$content,
         		'thumbnail'=>$thumbnail,
         		'relateContent'=>$relateContent,
-        		'arrTags' => $arrTags
+        		'arrTags' => $arrTags,
+        		'arrMedia' => $arrMedia
         ]);
     }
 }

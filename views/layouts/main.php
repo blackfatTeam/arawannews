@@ -95,7 +95,7 @@ $baseUriCss = $baseUri.'/assets/theme';
     <script src="<?= $baseUriCss?>/vendors/flexslider/jquery.flexslider-min.js"></script>
     
     <!--Magnific Popup-->
-    <script src="<?= $baseUriCss?>/js/jquery.magnific-popup.js"></script>
+    <script src="<?= $baseUriCss?>/js/jquery.magnific-popup.js?v=2"></script>
     
     <!--Instafeed-->
     <!-- <script src="<?= $baseUriCss?>/vendors/instafeed/instafeed.min.js"></script>  -->

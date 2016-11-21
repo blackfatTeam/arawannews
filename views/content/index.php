@@ -42,7 +42,8 @@ img{
 			<?= yii\base\View::render('single-blog', [
         		'content'=>$content,
         		'thumbnail'=>$thumbnail,
-				'relateContent'=>$relateContent
+				'relateContent'=>$relateContent,
+				'arrMedia' => $arrMedia
         ]);?>
 			<!--Sidebar Here-->						
 			<div class="col-sm-4 sidebar">

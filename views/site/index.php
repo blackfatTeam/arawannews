@@ -114,7 +114,10 @@ $baseUriCss = $baseUri.'/assets/theme';
             <div class="row m0 inner">
                 <div class="row m0 featured_img">
                     <a href="javascript:;">
-                    <?php echo Workflow::getThumbnail($lst)?>
+                    <?php echo Html::img(Workflow::getUripreview([
+		'width'=>538,
+		'wartermark'=>'',
+		'mediaId'=>$lst['thumbnail']]),['alt' => $lst['title']])?>
                     </a>
                 </div>
                 <div class="row m0 post_contents">
