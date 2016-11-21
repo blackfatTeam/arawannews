@@ -69,17 +69,23 @@ class SiteController extends Controller
     	$query->andWhere('web = :web', [':web' => $section]);
     	$query->andWhere(['in','orderNo',[1,2,3,4]]);
     	$arrOnline = $query->all();
-    	
+    	$currentTime = date('Y-m-d H:i:s');
     	$model = [];
     	if (!empty($arrOnline)){
 
     		foreach ($arrOnline as $lst){
     			$contents = null;
     			if ($lst->type == Workflow::TYPE_CONTENT){
-    				$contents = Contents::find()->where(['id'=>$lst->contentId])->one();
+    				$query = Contents::find();
     			}elseif ($lst->type == Workflow::TYPE_GALLARY){
-    				$contents = Gallary::find()->where(['id'=>$lst->contentId])->one();
+    				$query = Gallary::find();
     			}
+    			
+    			$query->andWhere('id = :id', [':id' => $lst->contentId]);
+    			$query->andWhere('status = :status', [':status' => Workflow::STATUS_PUBLISHED]);
+    			$query->andWhere('publishTime <= :publishTime', [':publishTime' => $currentTime]);
+    			
+    			$contents = $query->one();
     			
     			if (!empty($contents)){
     				if ($contents->status == Workflow::STATUS_PUBLISHED){

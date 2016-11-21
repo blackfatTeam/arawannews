@@ -1,6 +1,9 @@
 <?php
 use common\models\User;
 use app\lib\OnlineConfig;
+use yii\helpers\Html;
+use yii\helpers\Url;
+use app\lib\Workflow;
 $identity = \Yii::$app->user->getIdentity ();
 $baseUri = \Yii::getAlias ( '@web' );
 $baseUriCss = $baseUri . '/assets/theme';
@@ -40,7 +43,18 @@ $uri = Yii::$app->controller->getRoute ();
 			<img src="<?= $baseUriCss?>/images/navigation/logo/bars2.png" alt="">
 		</div>
 	</div>
-	<div class="row m0 navByCat">
+	
+	<div class="row m0 categories">
+		<h3 class="widgetTitle">categories</h3>
+		<ul class="nav">
+			<?php foreach (OnlineConfig::$arrSection as $key => $lst):?>
+			<?php if ($key !== 'home'):?>
+			<li><a href="<?php echo Url::toRoute(['category/'.$key]);?>"><?php echo $lst['title']?></a></li>
+			<?php endif;?>
+			<?php endforeach;?>
+		</ul>
+	</div>
+	<!-- <div class="row m0 navByCat">
 		<ul class="nav">
 			<li class="dropdown"><a href="#" class="dropdown-toggle"
 				data-toggle="dropdown" role="button" aria-haspopup="true"
@@ -95,8 +109,8 @@ $uri = Yii::$app->controller->getRoute ();
 					<li><a href="#">Deals</a></li>
 				</ul></li>
 		</ul>
-	</div>
-	<div class="row m0 just_posted">
+	</div> -->
+	<!-- <div class="row m0 just_posted">
 		<h3 class="widgetTitle">just posted</h3>
 		<ol>
 			<li><a href="#">Sticky Post: Jeb Bush Calls For VA Overhaul</a></li>
@@ -104,54 +118,30 @@ $uri = Yii::$app->controller->getRoute ();
 			<li><a href="#">Woman finds 4 urns in recently purchased used car</a></li>
 			<li><a href="#">Sticky Post: Jeb Bush Calls For VA Overhaul</a></li>
 		</ol>
-	</div>
+	</div> -->
+	<?php if (!empty($model)):?>
 	<div class="row m0 popular_posts">
-		<h3 class="widgetTitle">popular posts</h3>
+		<h3 class="widgetTitle">Hot Topic</h3>
+		<?php foreach ($model as $lst):?>
 		<div class="row m0 post">
-			<img src="<?= $baseUriCss?>/images/posts/popular/1.jpg" alt="" class="featured_img">
+		<?php echo Html::img(Workflow::getUripreview([
+		'width'=>270,
+		'height'=>300,
+		'wartermark'=>'',
+		'mediaId'=>$lst['thumbnail']]),['class'=>'featured-img', 'alt' => $lst['title']])?>
+			
 			<div class="post_contents">
 				<h4 class="category politics">
-					<a href="#">politics</a>
+					<a href="javascript:;"><?php echo $lst['categoryId']?Workflow::$arrCategory[$lst['categoryId']]:''?></a>
 				</h4>
-				<h4 class="title">
-					<a href="#">U.S. House Chamber Closed After Unknown Material</a>
-				</h4>
-			</div>
-		</div>
-		<div class="row m0 post">
-			<img src="<?= $baseUriCss?>/images/posts/popular/2.jpg" alt="" class="featured_img">
-			<div class="post_contents">
-				<h4 class="category sports">
-					<a href="#">sports</a>
-				</h4>
-				<h4 class="title">
-					<a href="#">Philip Rivers: I’m going to be a Charger, wherever we
-						are</a>
+				<h4 class="title dropShadow">
+					<a href="<?php echo Workflow::getLink($lst)?>"><?php echo $lst['title']?></a>
 				</h4>
 			</div>
 		</div>
-		<div class="row m0 post">
-			<img src="<?= $baseUriCss?>/images/posts/popular/3.jpg" alt="" class="featured_img">
-			<div class="post_contents">
-				<h4 class="category money">
-					<a href="#">money</a>
-				</h4>
-				<h4 class="title">
-					<a href="#">U.S. Flag Raised Over Embassy in Republic of Cuba</a>
-				</h4>
-			</div>
-		</div>
+		<?php endforeach;?>
 	</div>
-	
-	<div class="row m0 categories">
-		<h3 class="widgetTitle">categories</h3>
-		<ul class="nav">
-			<li><a href="#">politics <span>12</span></a></li>
-			<li><a href="#">sports <span>46</span></a></li>
-			<li><a href="#">money <span>15</span></a></li>
-			<li><a href="#">world <span>24</span></a></li>
-		</ul>
-	</div>
+	<?php endif;?>
 
 </div>
 <!--Sliding Menu Triggered with Menu End-->

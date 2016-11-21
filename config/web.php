@@ -68,6 +68,7 @@ $config = [
 					'showScriptName' => false,
 					'rules' => [
 						'<controller:content>/<postTitle:.+>'=>'<controller>/index',
+						'<controller:category>/<section:.+>'=>'<controller>/index',
 						/* '<controller:contact>'=>'<controller>/view',
 						'<controller:eletter>'=>'<controller>/index',
 						'<controller:contact>/<action:success>'=>'<controller>/success',

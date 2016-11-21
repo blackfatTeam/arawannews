@@ -7,7 +7,7 @@ $identity = \Yii::$app->user->getIdentity ();
 $baseUri = \Yii::getAlias ( '@web' );
 $baseUriCss = $baseUri . '/assets/theme';
 $user = \Yii::$app->user;
-$uri = Yii::$app->controller->getRoute ();
+$uri = Yii::$app->controller->getRoute();
 ?>
 <style>
 .hotTopicMenu{
@@ -81,7 +81,7 @@ $uri = Yii::$app->controller->getRoute ();
 							<ul class="nav">
 								<?php foreach (OnlineConfig::$arrSection as $key => $lst):?>
 								<?php if ($key !== 'home'):?>
-								<li><a href="javascript:;"><?php echo $lst['title']?></a></li>
+								<li><a href="<?php echo Url::toRoute(['category/'.$key]);?>"><?php echo $lst['title']?></a></li>
 								<?php endif;?>
 								<?php endforeach;?>
 							</ul>

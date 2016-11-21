@@ -162,18 +162,7 @@ $baseUriCss = $baseUri.'/assets/theme';
         </div><!--Post-->
         <?php }?>
         <?php endforeach;	?>
-        <!--  <div class="col-sm-3 post post-11 link">
-            <div class="row m0 inner">
-                <img src="<?php //echo $baseUriCss?>/images/posts/9.jpg" alt="">
-                <div class="row m0 post_contents">
-                    <h4 class="category politics"><a href="#">politics</a></h4>
-                    <h3 class="post_title"><a href="#">Deadly infections from medical scopes go unreported, raising health risks</a></h3>
-                    <ul class="post_meta nav nav-pills">
-                        <li><a href="#">August 6, 2015</a></li>
-                    </ul>                    
-                </div>
-            </div>
-        </div>-->
+
         
    
 </section>  
