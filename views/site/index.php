@@ -19,21 +19,22 @@ $baseUriCss = $baseUri.'/assets/theme';
 				<?php foreach ($arrModel as $lst):?>
 				<div class="row inner">
 					<?php echo Html::img(Workflow::getUripreview([
-		'width'=>300,
-		'height'=>300,
+		'width'=>800,
+		'height'=>800,
 		'wartermark'=>'',
-		'mediaId'=>$lst['thumbnail']]),['class'=>'featured-img'])?>
-					<!-- <img src="<?php //echo $baseUriCss?>/images/posts/features/1.jpg" alt="" class="featured-img"> -->
+		'mediaId'=>$lst['thumbnail']]),['class'=>'featured-img', 'alt' => $lst['title']])?>
 					<div class="row m0 content">
+						<?php if (!empty($lst['categoryId'])){?>
 						<h4 class="category politics">
-							<a href="#">111</a>
+							<a href="javascript:;"><?php echo $lst['categoryId']?Workflow::$arrCategory[$lst['categoryId']]:''?></a>
 						</h4>
+						<?php }?>
 						<h2 class="title">
 							<a class="dropShadow" href="<?php echo Workflow::getLink($lst)?>"><?php echo $lst['title']?></a>
 						</h2>
-						<p class="dropShadow"><?php echo $lst['abstract']?></p>
+						<p class="dropShadow hidden-xs"><?php echo $lst['abstract']?></p>
 						<ul class="post_meta nav nav-pills">
-							<li><a href="#"><?php echo DateUtil::th_date('j F Y, H:i น.', strtotime($lst['publishTime']))?></a></li>
+							<li><a href="#"><i class="fa fa-clock-o"></i> <?php echo DateUtil::th_date('j F Y, H:i น.', strtotime($lst['publishTime']))?></a></li>
 						</ul>
 					</div>
 				</div>
@@ -45,17 +46,23 @@ $baseUriCss = $baseUri.'/assets/theme';
 				<?php if (!empty($arrModel)):?>
 				<?php foreach ($arrModel as $lst):?>
 				<div class="row inner">
-					<img src="<?= $baseUriCss?>/images/posts/features/2.jpg" alt="" class="featured-img">
+					<?php echo Html::img(Workflow::getUripreview([
+		'width'=>800,
+		'height'=>400,
+		'wartermark'=>'',
+		'mediaId'=>$lst['thumbnail']]),['class'=>'featured-img', 'alt' => $lst['title']])?>
 					<div class="row m0 content">
+						<?php if (!empty($lst['categoryId'])){?>
 						<h4 class="category sports">
-							<a href="#">22222</a>
+							<a href="javascript:;"><?php echo $lst['categoryId']?Workflow::$arrCategory[$lst['categoryId']]:''?></a>
 						</h4>
+						<?php }?>
 						<h2 class="title">
-							<a href="<?php echo Workflow::getLink($lst)?>"><?php echo $lst['title']?></a>
+							<a class="dropShadow" href="<?php echo Workflow::getLink($lst)?>"><?php echo $lst['title']?></a>
 						</h2>
-						<p class="dropShadow"><?php echo $lst['abstract']?></p>
+						<p class="dropShadow hidden-xs"><?php echo $lst['abstract']?></p>
 						<ul class="post_meta nav nav-pills">
-							<li><a href="#"><?php echo DateUtil::th_date('j F Y, H:i น.', strtotime($lst['publishTime']))?></a></li>
+							<li><a href="#"><i class="fa fa-clock-o"></i> <?php echo DateUtil::th_date('j F Y, H:i น.', strtotime($lst['publishTime']))?></a></li>
 						</ul>
 					</div>
 				</div>
@@ -67,17 +74,23 @@ $baseUriCss = $baseUri.'/assets/theme';
 				<?php if (!empty($arrModel)):?>
 				<?php foreach ($arrModel as $lst):?>
 				<div class="row inner">
-					<img src="<?= $baseUriCss?>/images/posts/features/2.jpg" alt="" class="featured-img">
+					<?php echo Html::img(Workflow::getUripreview([
+		'width'=>800,
+		'height'=>400,
+		'wartermark'=>'',
+		'mediaId'=>$lst['thumbnail']]),['class'=>'featured-img', 'alt' => $lst['title']])?>
 					<div class="row m0 content">
+						<?php if (!empty($lst['categoryId'])){?>
 						<h4 class="category sports">
-							<a href="#">3333</a>
+							<a href="javascript:;"><?php echo $lst['categoryId']?Workflow::$arrCategory[$lst['categoryId']]:''?></a>
 						</h4>
+						<?php }?>
 						<h2 class="title">
-							<a href="<?php echo Workflow::getLink($lst)?>"><?php echo $lst['title']?></a>
+							<a class="dropShadow" href="<?php echo Workflow::getLink($lst)?>"><?php echo $lst['title']?></a>
 						</h2>
-						<p class="dropShadow"><?php echo $lst['abstract']?></p>
+						<p class="dropShadow hidden-xs"><?php echo $lst['abstract']?></p>
 						<ul class="post_meta nav nav-pills">
-							<li><a href="#"><?php echo DateUtil::th_date('j F Y, H:i น.', strtotime($lst['publishTime']))?></a></li>
+							<li><a href="#"><i class="fa fa-clock-o"></i> <?php echo DateUtil::th_date('j F Y, H:i น.', strtotime($lst['publishTime']))?></a></li>
 						</ul>
 					</div>
 				</div>
@@ -100,29 +113,21 @@ $baseUriCss = $baseUri.'/assets/theme';
         <div class="col-sm-3 post post-1">
             <div class="row m0 inner">
                 <div class="row m0 featured_img">
-                    <a href="single-blog.html">
+                    <a href="javascript:;">
                     <?php echo Workflow::getThumbnail($lst)?>
                     </a>
                 </div>
                 <div class="row m0 post_contents">
+                	<?php if (!empty($lst['categoryId'])){?>
                     <div class="row m0 category politics">
-                        <a href="#">politics</a>
-                        <div class="dropdown pull-right social_share_drop">
-                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fa fa-ellipsis-v"></i>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i> Google Plus</a></li>
-                                <li><a href="#"><i class="fa fa-pinterest"></i> Pinterest</a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
-                            </ul>
-                        </div>
+                        <a href="#"><?php echo $lst['categoryId']?Workflow::$arrCategory[$lst['categoryId']]:''?></a>
                     </div>
+                    <?php }?>
                     <h3 class="post_title"><a href="<?php echo Workflow::getLink($lst)?>"><?php echo $lst['title']?></a></h3>
+                    <p><?php echo $lst['abstract']?$lst['abstract']:'';?></p>
+                    <hr>
                     <ul class="post_meta nav nav-pills">
-                        <li><?php echo DateUtil::th_date('j F Y, H:i น.', strtotime($lst['publishTime']))?></li>
+                        <li><i class="fa fa-clock-o"></i> <?php echo DateUtil::th_date('j F Y, H:i น.', strtotime($lst['publishTime']))?></li>
                     </ul>                    
                 </div>
             </div>
@@ -139,24 +144,18 @@ $baseUriCss = $baseUri.'/assets/theme';
                     </div>
                 </div>
                 <div class="row m0 post_contents">
+                	<?php if (!empty($lst['categoryId'])){?>
                     <div class="row m0 category world">
-                        <a href="#">world</a>
-                        <div class="dropdown pull-right social_share_drop">
-                            <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <i class="fa fa-ellipsis-v"></i>
-                            </button>
-                            <ul class="dropdown-menu">
-                                <li><a href="#"><i class="fa fa-facebook"></i> Facebook</a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i> Google Plus</a></li>
-                                <li><a href="#"><i class="fa fa-pinterest"></i> Pinterest</a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i> LinkedIn</a></li>
-                            </ul>
-                        </div>
+                        <a href="javascript:;"><?php echo $lst['categoryId']?Workflow::$arrCategory[$lst['categoryId']]:''?></a>
                     </div>
-                    <h3 class="post_title"><a href="#"><?php echo $lst['title']?></a></h3>
+                    <?php }?>
+                    <h3 class="post_title">
+                    	<a href="<?php echo Workflow::getLink($lst)?>"><?php echo $lst['title']?></a>
+                    </h3>
+                    <p><?php echo $lst['abstract']?$lst['abstract']:'';?></p>
+                    <hr>
                     <ul class="post_meta nav nav-pills">
-                        <li><?php echo DateUtil::th_date('j F Y, H:i น.', strtotime($lst['publishTime']))?></li>
+                        <li><i class="fa fa-clock-o"></i> <?php echo DateUtil::th_date('j F Y, H:i น.', strtotime($lst['publishTime']))?></li>
                     </ul>                    
                 </div>
             </div>
@@ -179,3 +178,33 @@ $baseUriCss = $baseUri.'/assets/theme';
    
 </section>  
 <?php endif;?>
+
+<?php if (!empty($model['howTo'])):?>
+<section class="row video_posts" id="popular_videos">
+        <div class="container-fluid">
+        	<h4 class="category politics">
+				<a href="javascript:;" style="font-size: 30px !important;">HOW TO</a>
+			</h4>
+			<br>
+            <div class="row">
+            	<?php foreach ($model['howTo'] as $lst):?>
+                <div class="col-sm-3 video-post">
+                    
+                    <?php echo Html::img(Workflow::getUripreview([
+		'width'=>800,
+		'height'=>600,
+		'wartermark'=>'',
+		'mediaId'=>$lst['thumbnail']]),['class'=>'img-responsive', 'alt' => $lst['title']])?>
+		<br>
+				<div class="marginTop15">
+					<a class="linkTitleWhite" href="#"><?php echo $lst['title']?></a>
+				</div>
+				<br>
+                 <p class="linkAbstractWhite"><?php echo $lst['abstract']?></p>
+                </div>
+				<?php endforeach;?>
+            </div>
+        </div>
+    </section>
+    <?php endif;?>
+    <!--Popular Videos Here-->

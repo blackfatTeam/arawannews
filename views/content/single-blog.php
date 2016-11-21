@@ -1,6 +1,7 @@
 <?php
 use app\lib\DateUtil;
-
+use app\lib\Workflow;
+use yii\bootstrap\Html;
 $baseUri = Yii::getAlias ( '@web' );
 $baseUriCss = $baseUri . '/assets/theme';
 ?>
@@ -23,7 +24,7 @@ $baseUriCss = $baseUri . '/assets/theme';
 
 		<div class="post_inner row m0">
 			<div class="post_content row m0">
-				<img src="<?php echo $thumbnail->fullPath?>" alt=""class="img-responsive">
+				<img src="<?php echo $thumbnail->fullPath?>" alt="<?php echo $content->title?>" class="img-responsive">
 				<br>
 				<?php echo $content->content?>
 			</div>

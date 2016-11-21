@@ -80,7 +80,9 @@ $uri = Yii::$app->controller->getRoute ();
 						<li><a href="javascript:;">หมวดข่าว</a>
 							<ul class="nav">
 								<?php foreach (OnlineConfig::$arrSection as $key => $lst):?>
+								<?php if ($key !== 'home'):?>
 								<li><a href="javascript:;"><?php echo $lst['title']?></a></li>
+								<?php endif;?>
 								<?php endforeach;?>
 							</ul>
 						</li>

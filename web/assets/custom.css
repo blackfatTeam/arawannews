@@ -2,3 +2,14 @@
 	color: #FFFFFF !important;
 	text-shadow: 0px 2px 3px rgba(0, 3, 0, 1);
 }
+.linkTitleWhite{
+	color: #FFFFFF !important;
+	font-size: 20px;
+	margin-top: 15px !important;
+}
+.linkAbstractWhite{
+	color: #CCCCCC !important;
+}
+.marginTop15{
+	margin-top: 15px !important;
+}

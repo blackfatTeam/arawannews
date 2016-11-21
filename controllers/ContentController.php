@@ -54,7 +54,7 @@ class ContentController extends Controller
     			];
     		}
     	}
-
+    	$arrTags = [];
     	if (!empty($content->tags)){
 
     		$arrTags = explode(',', $content->tags);
