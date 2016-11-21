@@ -43,40 +43,20 @@ $baseUriCss = $baseUri . '/assets/theme';
 
                 <div class="row m0 post_content">
                     <div class="row m0 additional">
-                        <a href="<?php echo $lst->fullPath?>" class="zoom_gallery_img"><i class="fa fa-plus-square"></i></a>
+                        <a href="<?php echo $lst->fullPath?>" class="zoom_gallery_img"><i class="fa fa-search"></i></a>
                         
                     </div>
                     <div class="texts row m0">
-                        <h3 class="title">smoke and wheels</h3>
-                        <p>Phasellus tempus. Proin viverra, ligula sit amet ultrices semper, ligula arcu tristique sapien, a accumsan nisi mauris ac eros. Fusce neque. Suspendisse faucibus, nunc et pellentesque egestas.</p>
+                     
+                        <p><?php echo $lst->caption?></p>
                     </div>
-                    <a href="#" class="gallery_post_link"><i class="fa fa-link"></i></a>
+                    
                 </div>
             </div>
         </div> <!--Gallery Item / Post1 -->
         <?php endforeach;?>
     </section>
 	<?php endif;?>
-	<!-- <div class="row m0 related_post_row">
-		<div class="title_row row m0">
-			<h3 class="fleft">ข่าวที่เกี่ยวข้อง</h3>
-			<div class="fright" id="related_post_dots"></div>
-		</div>
-		<div class="related_posts row m0">
-			<div class="owl-carousel related_posts_carousel">
-				<?php //foreach ($relateContent as $item){?>
-				<div class="item">
-					<div class="featured_img row m0">
-						<img src="<?php //echo $item['thumbnail']?>" alt="">
-							
-					</div>
-					<h3>
-						<a href="#"><?php //echo $item['title']?></a>
-					</h3>
-				</div>
-				<?php //}?>
-			</div>
-		</div>
-	</div> -->
+
 </div>
 <!--Single Blog Here-->

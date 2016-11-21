@@ -2808,11 +2808,11 @@ button:hover {
   z-index: 3;
   position: absolute;
   right: 0;
-  padding-top: 25px;
+  padding-top: 5px;
   height: 65px;
   width: 100%;
-  padding-left: -webkit-calc(100% - 63px);
-  padding-left: calc(100% - 63px);
+  padding-left: -webkit-calc(100% - 20px);
+  padding-left: calc(100% - 20px);
 }
 .gallery_posts .post .inner .post_content .additional:before {
   content: '';
