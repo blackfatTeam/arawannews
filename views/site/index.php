@@ -113,7 +113,7 @@ $baseUriCss = $baseUri.'/assets/theme';
         <div class="col-sm-3 post post-1">
             <div class="row m0 inner">
                 <div class="row m0 featured_img">
-                    <a href="javascript:;">
+                    <a href="<?php echo Workflow::getLink($lst)?>">
                     <?php echo Html::img(Workflow::getUripreview([
 		'width'=>538,
 		'wartermark'=>'',
@@ -149,7 +149,7 @@ $baseUriCss = $baseUri.'/assets/theme';
                 <div class="row m0 post_contents">
                 	<?php if (!empty($lst['categoryId'])){?>
                     <div class="row m0 category world">
-                        <a href="javascript:;"><?php echo $lst['categoryId']?Workflow::$arrCategory[$lst['categoryId']]:''?></a>
+                        <a href="<?php echo Workflow::getLink($lst)?>"><?php echo $lst['categoryId']?Workflow::$arrCategory[$lst['categoryId']]:''?></a>
                     </div>
                     <?php }?>
                     <h3 class="post_title">

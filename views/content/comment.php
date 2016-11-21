@@ -7,7 +7,9 @@ $baseUriCss = $baseUri.'/assets/theme';
 	<h3 class="heading">ข่าวที่เกี่ยวข้อง</h3>
 	<div class="comments_row row m0">
 		<?php foreach ($relateContent as $lst):?>
+		
 		<div class="media comment">
+			<a href="#">
 			<div class="media-left">
 				<a href="#" class="comment_img"><img src="<?= $lst['thumbnail']?>" alt=""></a> 
 			</div>
@@ -17,7 +19,9 @@ $baseUriCss = $baseUri.'/assets/theme';
 				</h4>
 				<p><?php echo $lst['abstract']?></p>
 			</div>
+			</a>
 		</div>
+		
 		<?php endforeach;?>
 		
 	</div>
