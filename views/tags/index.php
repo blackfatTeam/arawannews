@@ -39,6 +39,7 @@ $this->registerCss($css);
                     <a href="single-blog.html"><img src="<?= Workflow::getUripreview([
                     		'width'=>250,
                     		'height'=>250,
+                    		'wartermark'=>true,
                     		'mediaId'=>$model->thumbnail
                     ])?>" alt=""></a>
                 </div>

@@ -143,11 +143,18 @@ class Workflow {
 		$mId = isset($params['mediaId'])?$params['mediaId']:null;
 		$w = isset($params['width'])?$params['width']:null;
 		$h = isset($params['height'])?$params['height']:null;
-		$wtm = isset($params['wartermark'])?$params['wartermark']:null;
-	
+		$wtm = isset($params['wartermark'])?$params['wartermark']:null;	
+		$wtmNo = Workflow::WATER_MARK_NONE;
+		
+		if($wtm){
+			$media = Media::findOne(['id'=>$mId]);
+			if($media){
+				$wtmNo = $media->watermarkNo;
+			}
+		}
 		//$baseUrl = \Yii::getAlias('@webUrl');
 		$baseUrl = 'http://localhost/arawannews/web';		
-		return $baseUrl.'/'.'media/genmedia'.'?'.'w='.$w.'&'.'h='.$h.'&'.'wtm='.$wtm.'&'.'mId='.$mId;
+		return $baseUrl.'/'.'media/genmedia'.'?'.'w='.$w.'&'.'h='.$h.'&'.'wtm='.$wtmNo.'&'.'mId='.$mId;
 	
 	}
 	
