@@ -1163,9 +1163,14 @@ button:hover {
 }
 .featured_posts .post .content {
   position: absolute;
-  bottom: 48px;
-  padding: 0 50px;
+  bottom: 0px;
+  padding: 40px;
   z-index: 3;
+  width:100%;
+  background: -moz-linear-gradient(top,  rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 99%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 99%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 99%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
 }
 .featured_posts .post .content .title {
   margin: 20px 0;
@@ -5566,7 +5571,7 @@ h5,
 .search_form_popup form .input-group {
   border-bottom: 2px solid #f31d12;
   padding-bottom: 18px;
-  padding-top: 67px;
+  padding-top: 0px;
 }
 .search_form_popup form .input-group .form-control {
   font-weight: 300;
