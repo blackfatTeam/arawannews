@@ -1,4 +1,6 @@
 <?php
+use app\lib\Workflow;
+use yii\bootstrap\Html;
 $baseUri = Yii::getAlias('@web');
 $baseUriCss = $baseUri.'/assets/theme';
 ?>
@@ -9,9 +11,9 @@ $baseUriCss = $baseUri.'/assets/theme';
 		<?php foreach ($relateContent as $lst):?>
 		
 		<div class="media comment">
-			<a href="#">
+			<a href="<?php echo Workflow::getLink($lst)?>">
 			<div class="media-left">
-				<a href="#" class="comment_img"><img src="<?= $lst['thumbnail']?>" alt=""></a> 
+				<a href="<?php echo Workflow::getLink($lst)?>" class="comment_img"><img src="<?= $lst['thumbnail']?>" alt=""></a> 
 			</div>
 			<div class="media-body">
 				<h4>

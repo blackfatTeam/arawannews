@@ -69,25 +69,11 @@ $config = [
 					'rules' => [
 						'<controller:content>/<postTitle:.+>'=>'<controller>/index',
 						'<controller:category>/<section:.+>'=>'<controller>/index',
-						/* '<controller:contact>'=>'<controller>/view',
-						'<controller:eletter>'=>'<controller>/index',
-						'<controller:contact>/<action:success>'=>'<controller>/success',
-						'<controller:instagram>/<action:view>'=>'<controller>/view',
-						'<controller:instagram>/<action:generate>'=>'<controller>/generate',
-						'<controller:instagram>/<action:info>'=>'<controller>/info',
-						'<controller:instagram>/<action:posted>'=>'<controller>/posted',
-						'<controller:instagram>/<action:readmore>'=>'<controller>/readmore',
-						'<controller:content>/<action:viewgallery>'=>'<controller>/viewgallery',
-						'<controller:content>/<action:changegallery>'=>'<controller>/changegallery',
-						'<controller:site>/<action:readmore>'=>'<controller>/readmore',
-						'<controller:category>/<action:readmore>'=>'<controller>/readmore',
-						'<controller:category>/<section:.+>'=>'<controller>/view',
-						'<controller:search>/<action:view>'=>'<controller>/view',
-						'<controller:site>/<action:error>'=>'<controller>/<action>',
-						'<controller:.+>'=>'content/view', */
 					]
 				] 
 		],
+		'timeZone' => 'Asia/Bangkok',
+		'language' => 'th',
 		'params' => $params 
 ];
 

@@ -160,8 +160,8 @@ class Workflow {
 	const WATER_MARK_2 = 2;		//ลายน้ำแบบที่ 2
 	
 	public static $arrWaterMark = [
-		self::WATER_MARK_1 => 'sample-trans1.png',
-		self::WATER_MARK_2 => 'sample-trans2.png',
+		self::WATER_MARK_1 => '/domains/arawannews.com/public_html/cms/images/sample-trans1.png',
+		self::WATER_MARK_2 => '/domains/arawannews.com/public_html/cms/images/sample-trans2.png',
 	];
 	
 	/**

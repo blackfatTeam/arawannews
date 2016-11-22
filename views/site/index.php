@@ -189,7 +189,7 @@ $baseUriCss = $baseUri.'/assets/theme';
 		'mediaId'=>$lst['thumbnail']]),['class'=>'img-responsive', 'alt' => $lst['title']])?>
 		<br>
 				<div class="marginTop15">
-					<a class="linkTitleWhite" href="#"><?php echo $lst['title']?></a>
+					<a class="linkTitleWhite" href="<?php echo Workflow::getLink($lst)?>"><?php echo $lst['title']?></a>
 				</div>
 				<br>
                  <p class="linkAbstractWhite"><?php echo $lst['abstract']?></p>
