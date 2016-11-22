@@ -80,13 +80,11 @@ class SiteController extends Controller
     			}elseif ($lst->type == Workflow::TYPE_GALLARY){
     				$query = Gallary::find();
     			}
-    			
     			$query->andWhere('id = :id', [':id' => $lst->contentId]);
     			$query->andWhere('status = :status', [':status' => Workflow::STATUS_PUBLISHED]);
     			$query->andWhere('publishTime <= :publishTime', [':publishTime' => $currentTime]);
-    			
     			$contents = $query->one();
-    			
+
     			if (!empty($contents)){
     				if ($contents->status == Workflow::STATUS_PUBLISHED){
     					if ($lst->section == 'home'){
