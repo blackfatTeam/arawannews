@@ -99,25 +99,25 @@ $uri = Yii::$app->controller->getRoute();
 <!-- Modal -->
 <section class="row search_form_popup modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 	<div class="container">
-		<div class="row">
-			<div class="col-sm-4">
-				<h2>
-					I�m Agesxx <br>magazine &amp; Blog
-				</h2>
-				<a href="about.html"><i class="fa fa-info-circle"></i>get more info</a>
-			</div>
-			<div class="col-sm-8">
-				<form action="<?php echo Url::to(['search/index'])?>" type="GET" class="row m0">
-					<div class="input-group">
-						<input type="search" name="q" class="form-control"
-							placeholder="Search"> <span class="input-group-addon">
-							<button type="submit">
-								<i class="fa fa-search"></i>
-							</button>
-						</span>
+				<div class="row">
+					<div class="col-sm-4">
+						<h2>
+							ค้นหาข่าว
+						</h2>
 					</div>
-				</form>
-			</div>
-		</div>
+					<div class="col-sm-8">
+						<form action="<?php echo Url::to(['search/index'])?>" type="GET" class="row m0">
+							<div class="input-group">
+								<input type="search" name="q" class="form-control"
+									placeholder="Search"> <span class="input-group-addon">
+									<button type="submit">
+										<i class="fa fa-search"></i>
+									</button>
+								</span>
+							</div>
+						</form>
+					</div>
+				</div>
+
 	</div>
 </section>
