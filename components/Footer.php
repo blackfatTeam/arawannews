@@ -26,11 +26,13 @@ class Footer extends Widget {
 		
 			foreach ($arrOnline as $lst){
 				$contents = null;
-				if ($lst->type == Workflow::TYPE_CONTENT){
+				
+				$query = Contents::find();
+				/* if ($lst->type == Workflow::TYPE_CONTENT){
 					$query = Contents::find();
 				}elseif ($lst->type == Workflow::TYPE_GALLARY){
 					$query = Gallary::find();
-				}
+				} */
 				 
 				$query->andWhere('id = :id', [':id' => $lst->contentId]);
 				$query->andWhere('status = :status', [':status' => Workflow::STATUS_PUBLISHED]);

@@ -75,11 +75,13 @@ class SiteController extends Controller
 
     		foreach ($arrOnline as $lst){
     			$contents = null;
-    			if ($lst->type == Workflow::TYPE_CONTENT){
+    			
+    			$query = Contents::find();
+    			/* if ($lst->type == Workflow::TYPE_CONTENT){
     				$query = Contents::find();
     			}elseif ($lst->type == Workflow::TYPE_GALLARY){
-    				$query = Gallary::find();
-    			}
+    				$query = Contents::find();
+    			} */
     			$query->andWhere('id = :id', [':id' => $lst->contentId]);
     			$query->andWhere('status = :status', [':status' => Workflow::STATUS_PUBLISHED]);
     			$query->andWhere('publishTime <= :publishTime', [':publishTime' => $currentTime]);

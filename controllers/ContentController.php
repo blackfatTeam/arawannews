@@ -51,10 +51,10 @@ class ContentController extends Controller
     					'title'=>$model->title,
     					'abstract'=>$model->abstract,
     					'thumbnail'=>$arrPath->{Workflow::SIZE_LIT},
-    					'publishTime' => $contents->publishTime,
-    					'theme' => $contents->theme,
-    					'postTitle' => $contents->postTitle,
-    					'categoryId' => $contents->categoryId
+    					'publishTime' => $model->publishTime,
+    					'theme' => $model->theme,
+    					'postTitle' => $model->postTitle,
+    					'categoryId' => $model->categoryId
     			];
     		}
     		

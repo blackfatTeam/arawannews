@@ -6,6 +6,13 @@ $baseUriCss = $baseUri.'/assets/theme';
 use yii\bootstrap\Html;
 use app\lib\Workflow;
 ?>
+<style>
+.featured_posts span.category{
+	color: #FFFFFF;
+	background-color: #f31d12;
+	padding:5px;
+}
+</style>
 <div style="margin: 25px;">
 	<h4 class="category politics">
 	<a href="javascript:;" style="font-size: 30px !important;color: #333333;"><?php echo $sectionTitle?$sectionTitle['title']:''?></a>
@@ -20,6 +27,7 @@ use app\lib\Workflow;
             <div class="row" id="featured_posts2">
             	<?php foreach ($content as $lst):?>
                 <div class="col-sm-6 post">
+                	<a href="<?php echo Workflow::getLink($lst)?>" style="z-index: 2;content: none !important;">
                     <div class="row inner">
                     	<?php echo Html::img(Workflow::getUripreview([
 		'width'=>800,
@@ -27,13 +35,14 @@ use app\lib\Workflow;
 		'wartermark'=>'',
 		'mediaId'=>$lst['thumbnail']]),['class'=>'featured-img', 'alt' => $lst['title']])?>
                         <div class="row m0 content">
-                            <h4 class="category sports"><a href="javascript:;"><?php echo $lst['categoryId']?Workflow::$arrCategory[$lst['categoryId']]:''?></a></h4>
+                            <span class="category sports"><?php echo $lst['categoryId']?Workflow::$arrCategory[$lst['categoryId']]:''?></span>
                             <h2 class="title dropShadow"><a href="<?php echo Workflow::getLink($lst)?>"><?php echo $lst['title']?></a></h2>
                             <ul class="post_meta nav nav-pills">
                                 <li><a href="javascript:;"><i class="fa fa-clock-o"></i> <?php echo DateUtil::th_date('j F Y, H:i น.', strtotime($lst['publishTime']))?></a></li>
                             </ul>
                         </div>
                     </div>
+                    </a>
                 </div>
                 <?php endforeach;?>
              </div>
@@ -43,6 +52,7 @@ use app\lib\Workflow;
             <div class="row" id="featured_posts2">
             	<?php foreach ($content as $lst):?>
                 <div class="col-sm-6 post">
+                	<a href="<?php echo Workflow::getLink($lst)?>" style="z-index: 2;content: none !important;">
                     <div class="row inner">
                     	<?php echo Html::img(Workflow::getUripreview([
 		'width'=>800,
@@ -50,13 +60,14 @@ use app\lib\Workflow;
 		'wartermark'=>'',
 		'mediaId'=>$lst['thumbnail']]),['class'=>'featured-img', 'alt' => $lst['title']])?>
                         <div class="row m0 content">
-                            <h4 class="category sports"><a href="<?php echo Workflow::getLink($lst)?>"><?php echo $lst['categoryId']?Workflow::$arrCategory[$lst['categoryId']]:''?></a></h4>
-                            <h2 class="title dropShadow"><a href="single-blog.html"><?php echo $lst['title']?></a></h2>
+                            <span class="category sports"><?php echo $lst['categoryId']?Workflow::$arrCategory[$lst['categoryId']]:''?></span>
+                            <h2 class="title dropShadow"><a href="<?php echo Workflow::getLink($lst)?>"><?php echo $lst['title']?></a></h2>
                             <ul class="post_meta nav nav-pills">
                                 <li><a href="javascript:;"><i class="fa fa-clock-o"></i> <?php echo DateUtil::th_date('j F Y, H:i น.', strtotime($lst['publishTime']))?></a></li>
                             </ul>
                         </div>
                     </div>
+                    </a>
                 </div>
                 <?php endforeach;?>
              </div>
