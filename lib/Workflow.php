@@ -377,7 +377,7 @@ class Workflow {
 				foreach ($resultMedia as $lst){
 					$arrMedia = json_decode($lst->thumbPath, true);
 					if ($arrMedia[Workflow::SIZE_MID]) {
-						$arrResult .= '<div class="item"><img src="'.$arrMedia[Workflow::SIZE_MID].'"></div>';
+						$arrResult .= '<div class="item"><a href="'.Workflow::getLink($data).'"><img src="'.$arrMedia[Workflow::SIZE_MID].'"></a></div>';
 					}else{
 						$arrResult .= '<div class="item"><img src="'.$baseUrl.'/assets/img/no-thumbnail.jpg"'.'></div>';
 					}
