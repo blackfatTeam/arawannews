@@ -79,11 +79,13 @@ $baseUriCss = $baseUri.'/assets/theme';
     <!--Bootstrap JS-->
     <script src="<?= $baseUriCss?>/js/bootstrap.min.js"></script>
         
+    <!--Owl Carousel-->
+    <script src="<?= $baseUriCss?>/vendors/owl.carousel/owl.carousel.min.js"></script>    
+        
     <!--mCustom Scrollbar-->
     <script src="<?= $baseUriCss?>/vendors/mCustomScrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
     
-    <!--Owl Carousel-->
-    <script src="<?= $baseUriCss?>/vendors/owl.carousel/owl.carousel.min.js"></script>
+    
     
     <!--Counter Up-->
     <script src="<?= $baseUriCss?>/vendors/counterup/jquery.counterup.min.js"></script>

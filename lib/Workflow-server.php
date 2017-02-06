@@ -353,8 +353,7 @@ class Workflow {
 		return $result;
 	}
 	
-	//ดึงรูปภาพมาแสดงเป็น thumbnail แบบ Gallery
-	public static function getThumbnailGallery($data){
+public static function getThumbnailGallery($data){
 		$baseUrl = \Yii::getAlias('@web');
 		
 		$arrResult = '';
@@ -368,9 +367,16 @@ class Workflow {
 			if (!empty($resultMedia)) {
 				
 				foreach ($resultMedia as $lst){
-					$arrMedia = json_decode($lst->thumbPath, true);
-					if ($arrMedia[Workflow::SIZE_MID]) {
-						$arrResult .= '<div class="item"><img src="'.$arrMedia[Workflow::SIZE_MID].'"></div>';
+					//$arrMedia = json_decode($lst->thumbPath, true);
+					
+					$mediaUrl = Html::img(Workflow::getUripreview([
+							'width'=>466,
+							'height'=>300,
+							'wartermark'=>'',
+							'mediaId'=>$lst->id]),['alt' => $lst->id]);
+					
+					if (!empty($mediaUrl)) {
+						$arrResult .= '<div class="item"><a href="'.Workflow::getLink($data).'">'.$mediaUrl.'</a></div>';
 					}else{
 						$arrResult .= '<div class="item"><img src="'.$baseUrl.'/assets/img/no-thumbnail.jpg"'.'></div>';
 					}

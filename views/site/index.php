@@ -157,7 +157,7 @@ $baseUriCss = $baseUri.'/assets/theme';
 		
         <?php foreach ($model['others'] as $lst):?>
         
-        <?php if ($lst['theme'] == 1){?>
+        <?php //if ($lst['theme'] == 1){?>
         <div class="col-sm-3 post post-1">
             <div class="row m0 inner">
                 <div class="row m0 featured_img">
@@ -180,14 +180,14 @@ $baseUriCss = $baseUri.'/assets/theme';
                     <p><?php echo $lst['abstract']?iconv_substr($lst['abstract'],0,60, "UTF-8")."...":'';?></p>
                     <hr>
                     <ul class="post_meta nav nav-pills">
-                        <li><i class="fa fa-clock-o"></i> <?php echo DateUtil::th_date('j F Y, H:i น.', strtotime($lst['publishTime']))?></li>
+                        <li><i class="fa fa-clock-o"></i> <i><?php echo DateUtil::th_date('j F Y, H:i น.', strtotime($lst['publishTime']))?></i></li>
                     </ul>                    
                 </div>
             </div>
         </div>
         
-        
-        <?php }elseif ($lst['theme'] == 2){?>
+        <?php if(false):?>
+        <?php //}elseif ($lst['theme'] == 2){?>
         
         <div class="col-sm-3 post post-9">
             <div class="row m0 inner">
@@ -215,7 +215,8 @@ $baseUriCss = $baseUri.'/assets/theme';
                 </div>
             </div>
         </div><!--Post-->
-        <?php }?>
+        <?php //}?>
+        <?php endif;?>
         <?php endforeach;	?>
 
         
