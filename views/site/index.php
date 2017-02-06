@@ -32,16 +32,16 @@ $baseUriCss = $baseUri.'/assets/theme';
 		'wartermark'=>'',
 		'mediaId'=>$lst['thumbnail']]),['class'=>'featured-img', 'alt' => $lst['title']])?>
 					<div class="row m0 content">
-					
+						<?php if(false):?>
 						<?php if (!empty($lst['categoryId'])){?>
 						<span class="category politics">
 							<?php echo $lst['categoryId']?Workflow::$arrCategory[$lst['categoryId']]:''?>
 						</span>
 						<?php }?>
+						<?php endif;?>
 						<h2 class="title">
 							<a class="dropShadow" href="<?php echo Workflow::getLink($lst)?>"><?php echo $lst['title']?></a>
 						</h2>
-						<p class="dropShadow hidden-xs"><?php echo $lst['abstract']?></p>
 						<ul class="post_meta nav nav-pills">
 							<li><a href="#"><i class="fa fa-clock-o"></i> <?php echo DateUtil::th_date('j F Y, H:i น.', strtotime($lst['publishTime']))?></a></li>
 						</ul>
@@ -64,41 +64,13 @@ $baseUriCss = $baseUri.'/assets/theme';
 		'wartermark'=>'',
 		'mediaId'=>$lst['thumbnail']]),['class'=>'featured-img', 'alt' => $lst['title']])?>
 					<div class="row m0 content">
+						<?php if(false):?>
 						<?php if (!empty($lst['categoryId'])){?>
 						<span class="category sports">
 							<?php echo $lst['categoryId']?Workflow::$arrCategory[$lst['categoryId']]:''?>
 						</span>
 						<?php }?>
-						<h2 class="title">
-							<a class="dropShadow" href="<?php echo Workflow::getLink($lst)?>"><?php echo $lst['title']?></a>
-						</h2>
-						<p class="dropShadow hidden-xs"><?php echo $lst['abstract']?></p>
-						<ul class="post_meta nav nav-pills">
-							<li><a href="#"><i class="fa fa-clock-o"></i> <?php echo DateUtil::th_date('j F Y, H:i น.', strtotime($lst['publishTime']))?></a></li>
-						</ul>
-					</div>
-					</a>
-				</div>
-				<?php endforeach;?>
-				<?php endif; ?>
-			</div>
-			<div class="col-lg-3 col-md-3 post">
-				<?php $arrModel = array_splice($model[OnlineConfig::ONLINE_HOME], 0 ,1);?>
-				<?php if (!empty($arrModel)):?>
-				<?php foreach ($arrModel as $lst):?>
-				<div class="row inner">
-					<a href="<?php echo Workflow::getLink($lst)?>" style="z-index: 2;">
-					<?php echo Html::img(Workflow::getUripreview([
-		'width'=>400,
-		'height'=>400,
-		'wartermark'=>'',
-		'mediaId'=>$lst['thumbnail']]),['class'=>'featured-img', 'alt' => $lst['title']])?>
-					<div class="row m0 content">
-						<?php if (!empty($lst['categoryId'])){?>
-						<span class="category sports">
-							<?php echo $lst['categoryId']?Workflow::$arrCategory[$lst['categoryId']]:''?>
-						</span>
-						<?php }?>
+						<?php endif;?>
 						<h2 class="title">
 							<a class="dropShadow" href="<?php echo Workflow::getLink($lst)?>"><?php echo $lst['title']?></a>
 						</h2>
@@ -123,11 +95,44 @@ $baseUriCss = $baseUri.'/assets/theme';
 		'wartermark'=>'',
 		'mediaId'=>$lst['thumbnail']]),['class'=>'featured-img', 'alt' => $lst['title']])?>
 					<div class="row m0 content">
+						<?php if(false):?>
 						<?php if (!empty($lst['categoryId'])){?>
 						<span class="category sports">
 							<?php echo $lst['categoryId']?Workflow::$arrCategory[$lst['categoryId']]:''?>
 						</span>
 						<?php }?>
+						<?php endif;?>
+						<h2 class="title">
+							<a class="dropShadow" href="<?php echo Workflow::getLink($lst)?>"><?php echo $lst['title']?></a>
+						</h2>
+						<ul class="post_meta nav nav-pills">
+							<li><a href="#"><i class="fa fa-clock-o"></i> <?php echo DateUtil::th_date('j F Y, H:i น.', strtotime($lst['publishTime']))?></a></li>
+						</ul>
+					</div>
+					</a>
+				</div>
+				<?php endforeach;?>
+				<?php endif; ?>
+			</div>
+			<div class="col-lg-3 col-md-3 post">
+				<?php $arrModel = array_splice($model[OnlineConfig::ONLINE_HOME], 0 ,1);?>
+				<?php if (!empty($arrModel)):?>
+				<?php foreach ($arrModel as $lst):?>
+				<div class="row inner">
+					<a href="<?php echo Workflow::getLink($lst)?>" style="z-index: 2;">
+					<?php echo Html::img(Workflow::getUripreview([
+		'width'=>400,
+		'height'=>400,
+		'wartermark'=>'',
+		'mediaId'=>$lst['thumbnail']]),['class'=>'featured-img', 'alt' => $lst['title']])?>
+					<div class="row m0 content">
+						<?php if(false):?>
+						<?php if (!empty($lst['categoryId'])){?>
+						<span class="category sports">
+							<?php echo $lst['categoryId']?Workflow::$arrCategory[$lst['categoryId']]:''?>
+						</span>
+						<?php }?>
+						<?php endif;?>
 						<h2 class="title">
 							<a class="dropShadow" href="<?php echo Workflow::getLink($lst)?>"><?php echo $lst['title']?></a>
 						</h2>
@@ -164,13 +169,15 @@ $baseUriCss = $baseUri.'/assets/theme';
                     </a>
                 </div>
                 <div class="row m0 post_contents">
+                	<?php if (false):?>
                 	<?php if (!empty($lst['categoryId'])){?>
                     <div class="row m0 category politics">
                         <a href="#"><?php echo $lst['categoryId']?Workflow::$arrCategory[$lst['categoryId']]:''?></a>
                     </div>
                     <?php }?>
+                    <?php endif;?>
                     <h3 class="post_title"><a href="<?php echo Workflow::getLink($lst)?>"><?php echo $lst['title']?></a></h3>
-                    <p><?php echo $lst['abstract']?$lst['abstract']:'';?></p>
+                    <p><?php echo $lst['abstract']?iconv_substr($lst['abstract'],0,60, "UTF-8")."...":'';?></p>
                     <hr>
                     <ul class="post_meta nav nav-pills">
                         <li><i class="fa fa-clock-o"></i> <?php echo DateUtil::th_date('j F Y, H:i น.', strtotime($lst['publishTime']))?></li>
@@ -190,15 +197,17 @@ $baseUriCss = $baseUri.'/assets/theme';
                     </div>
                 </div>
                 <div class="row m0 post_contents">
+                	<?php if (false):?>
                 	<?php if (!empty($lst['categoryId'])){?>
                     <div class="row m0 category world">
                         <a href="<?php echo Workflow::getLink($lst)?>"><?php echo $lst['categoryId']?Workflow::$arrCategory[$lst['categoryId']]:''?></a>
                     </div>
                     <?php }?>
+                    <?php endif;?>
                     <h3 class="post_title">
                     	<a href="<?php echo Workflow::getLink($lst)?>"><?php echo $lst['title']?></a>
                     </h3>
-                    <p><?php echo $lst['abstract']?$lst['abstract']:'';?></p>
+                    <p><?php echo $lst['abstract']?iconv_substr($lst['abstract'],0,60, "UTF-8")."...":'';?></p>
                     <hr>
                     <ul class="post_meta nav nav-pills">
                         <li><i class="fa fa-clock-o"></i> <?php echo DateUtil::th_date('j F Y, H:i น.', strtotime($lst['publishTime']))?></li>
@@ -235,7 +244,7 @@ $baseUriCss = $baseUri.'/assets/theme';
 					<a class="linkTitleWhite" href="<?php echo Workflow::getLink($lst)?>"><?php echo $lst['title']?></a>
 				</div>
 				<br>
-                 <p class="linkAbstractWhite"><?php echo $lst['abstract']?></p>
+                 <p class="linkAbstractWhite"><?php echo $lst['abstract']?iconv_substr($lst['abstract'],0,60, "UTF-8")."...":'';?></p>
                 </div>
 				<?php endforeach;?>
             </div>

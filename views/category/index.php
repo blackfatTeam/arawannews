@@ -86,7 +86,7 @@ use app\lib\Workflow;
         <div class="col-sm-3 post post-1">
             <div class="row m0 inner">
                 <div class="row m0 featured_img">
-                    <a href="javascript:;">
+                    <a href="<?php echo Workflow::getLink($lst)?>">
                     <?php echo Workflow::getThumbnail($lst)?>
                     </a>
                 </div>

@@ -24,7 +24,9 @@ $baseUriCss = $baseUri . '/assets/theme';
 
 		<div class="post_inner row m0">
 			<div class="post_content row m0">
+				<?php if(false):?>
 				<img src="<?php echo $thumbnail->fullPath?>" alt="<?php echo $content->title?>" class="img-responsive">
+				<?php endif;?>
 				<br>
 				<?php echo $content->content?>
 			</div>
