@@ -63,6 +63,7 @@ class ContentController extends Controller
     			$query = Media::find();
     			$query->andWhere('refId = :refId', [':refId' => $content->id]);
     			$query->andWhere('type = :type', [':type' => Workflow::TYPE_CONTENT]);
+    			$query->andWhere('isGallery = :isGallery', [':isGallery' => 1]);
     			$query->orderBy('id ASC');
     			$arrMedia = $query->all();
     		}
