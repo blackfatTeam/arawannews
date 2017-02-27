@@ -103,7 +103,7 @@ $baseUriCss = $baseUri.'/assets/theme';
 						<?php }?>
 						<?php endif;?>
 						<h2 class="title">
-							<a class="dropShadow" href="<?php echo Workflow::getLink($lst)?>"><?php echo $lst['title']?></a>
+							<a class="dropShadow font20" href="<?php echo Workflow::getLink($lst)?>"><?php echo $lst['title']?></a>
 						</h2>
 						<ul class="post_meta nav nav-pills">
 							<li><a href="#"><i class="fa fa-clock-o"></i> <?php echo DateUtil::th_date('j F Y, H:i น.', strtotime($lst['publishTime']))?></a></li>
@@ -134,7 +134,7 @@ $baseUriCss = $baseUri.'/assets/theme';
 						<?php }?>
 						<?php endif;?>
 						<h2 class="title">
-							<a class="dropShadow" href="<?php echo Workflow::getLink($lst)?>"><?php echo $lst['title']?></a>
+							<a class="dropShadow font20" href="<?php echo Workflow::getLink($lst)?>"><?php echo $lst['title']?></a>
 						</h2>
 						<ul class="post_meta nav nav-pills">
 							<li><a href="#"><i class="fa fa-clock-o"></i> <?php echo DateUtil::th_date('j F Y, H:i น.', strtotime($lst['publishTime']))?></a></li>
@@ -150,6 +150,502 @@ $baseUriCss = $baseUri.'/assets/theme';
 	</div>
 </section>
 <?php endif;?>
+
+
+
+<section class="row featured_posts">
+	<div class="container-fluid">
+		<section>
+			<div class="row headline">เจาะประเด็น</div>
+			<div class="row">
+				<?php for ($i=1;$i<=4;$i++){?>
+				<div class="col-lg-3 col-md-3 post">
+				<div class="blog-data">
+						<a href="#" style="z-index: 2;">
+							<img src="http://localhost/arawannews/web/media/genmedia?w=400&h=400&wtm=0&mId=10" class="featured-img"/>
+						</a>
+						<div class="content-detail">
+							<h3>เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</h3>
+							<span>ปัจจุบันวิวัฒนาการความงามก้าวไกลไปค่อนข้างมาก โดยเฉพาะนวัตกรรม</span>
+						</div>
+					</div>
+				</div>
+				<?php }?>
+			</div>
+		</section>
+	</div>
+</section>
+
+<section class="row featured_posts">
+	<div class="container-fluid">
+		<div class="blog-data">
+			<div class="col-lg-3 col-md-3">
+				<div class="row headline">การเมือง</div>
+				<div class="post">
+					<div class="blog-data">
+						<a href="#" style="z-index: 2;">
+							<img src="http://localhost/arawannews/web/media/genmedia?w=400&h=400&wtm=0&mId=10" class="featured-img"/>
+						</a>
+						<div class="content-detail">
+							<h3>เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</h3>
+							<span>ปัจจุบันวิวัฒนาการความงามก้าวไกลไปค่อนข้างมาก โดยเฉพาะนวัตกรรม</span>
+						</div>
+					</div>
+				</div>
+				<div class="post post-secondary">
+					<div class="blog-data">
+						<div class="content-detail">
+							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
+						</div>
+					</div>
+				</div>
+				<div class="post post-secondary">
+					<div class="blog-data">
+						<div class="content-detail">
+							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
+						</div>
+					</div>
+				</div>
+				<div class="post post-secondary">
+					<div class="blog-data">
+						<div class="content-detail">
+							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3">
+				<div class="row headline">เศรษฐกิจ</div>
+				<div class="post">
+					<div class="blog-data">
+						<a href="#" style="z-index: 2;">
+							<img src="http://localhost/arawannews/web/media/genmedia?w=400&h=400&wtm=0&mId=10" class="featured-img"/>
+						</a>
+						<div class="content-detail">
+							<h3>เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</h3>
+							<span>ปัจจุบันวิวัฒนาการความงามก้าวไกลไปค่อนข้างมาก โดยเฉพาะนวัตกรรม</span>
+						</div>
+					</div>
+				</div>
+				<div class="post post-secondary">
+					<div class="blog-data">
+						<div class="content-detail">
+							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
+						</div>
+					</div>
+				</div>
+				<div class="post post-secondary">
+					<div class="blog-data">
+						<div class="content-detail">
+							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
+						</div>
+					</div>
+				</div>
+				<div class="post post-secondary">
+					<div class="blog-data">
+						<div class="content-detail">
+							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3">
+				<div class="row headline">อาชญากรรม</div>
+				<div class="post">
+					<div class="blog-data">
+						<a href="#" style="z-index: 2;">
+							<img src="http://localhost/arawannews/web/media/genmedia?w=400&h=400&wtm=0&mId=10" class="featured-img"/>
+						</a>
+						<div class="content-detail">
+							<h3>เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</h3>
+							<span>ปัจจุบันวิวัฒนาการความงามก้าวไกลไปค่อนข้างมาก โดยเฉพาะนวัตกรรม</span>
+						</div>
+					</div>
+				</div>
+				<div class="post post-secondary">
+					<div class="blog-data">
+						<div class="content-detail">
+							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
+						</div>
+					</div>
+				</div>
+				<div class="post post-secondary">
+					<div class="blog-data">
+						<div class="content-detail">
+							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
+						</div>
+					</div>
+				</div>
+				<div class="post post-secondary">
+					<div class="blog-data">
+						<div class="content-detail">
+							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3">
+				<div class="row headline">ต่างประเทศ</div>
+				<div class="post">
+					<div class="blog-data">
+						<a href="#" style="z-index: 2;">
+							<img src="http://localhost/arawannews/web/media/genmedia?w=400&h=400&wtm=0&mId=10" class="featured-img"/>
+						</a>
+						<div class="content-detail">
+							<h3>เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</h3>
+							<span>ปัจจุบันวิวัฒนาการความงามก้าวไกลไปค่อนข้างมาก โดยเฉพาะนวัตกรรม</span>
+						</div>
+					</div>
+				</div>
+				<div class="post post-secondary">
+					<div class="blog-data">
+						<div class="content-detail">
+							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
+						</div>
+					</div>
+				</div>
+				<div class="post post-secondary">
+					<div class="blog-data">
+						<div class="content-detail">
+							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
+						</div>
+					</div>
+				</div>
+				<div class="post post-secondary">
+					<div class="blog-data">
+						<div class="content-detail">
+							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="row featured_posts">
+	<div class="container-fluid">
+		<div class="blog-data">
+			<div class="col-lg-3 col-md-3">
+				<div class="row headline">พระราชสำนัก</div>
+				<div class="post">
+					<div class="blog-data">
+						<a href="#" style="z-index: 2;">
+							<img src="http://localhost/arawannews/web/media/genmedia?w=400&h=400&wtm=0&mId=10" class="featured-img"/>
+						</a>
+						<div class="content-detail">
+							<h3>เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</h3>
+							<span>ปัจจุบันวิวัฒนาการความงามก้าวไกลไปค่อนข้างมาก โดยเฉพาะนวัตกรรม</span>
+						</div>
+					</div>
+				</div>
+				<div class="post post-secondary">
+					<div class="blog-data">
+						<div class="content-detail">
+							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
+						</div>
+					</div>
+				</div>
+				<div class="post post-secondary">
+					<div class="blog-data">
+						<div class="content-detail">
+							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
+						</div>
+					</div>
+				</div>
+				<div class="post post-secondary">
+					<div class="blog-data">
+						<div class="content-detail">
+							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3">
+				<div class="row headline">กีฬา</div>
+				<div class="post">
+					<div class="blog-data">
+						<a href="#" style="z-index: 2;">
+							<img src="http://localhost/arawannews/web/media/genmedia?w=400&h=400&wtm=0&mId=10" class="featured-img"/>
+						</a>
+						<div class="content-detail">
+							<h3>เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</h3>
+							<span>ปัจจุบันวิวัฒนาการความงามก้าวไกลไปค่อนข้างมาก โดยเฉพาะนวัตกรรม</span>
+						</div>
+					</div>
+				</div>
+				<div class="post post-secondary">
+					<div class="blog-data">
+						<div class="content-detail">
+							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
+						</div>
+					</div>
+				</div>
+				<div class="post post-secondary">
+					<div class="blog-data">
+						<div class="content-detail">
+							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
+						</div>
+					</div>
+				</div>
+				<div class="post post-secondary">
+					<div class="blog-data">
+						<div class="content-detail">
+							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3">
+				<div class="row headline">บันเทิง</div>
+				<div class="post">
+					<div class="blog-data">
+						<a href="#" style="z-index: 2;">
+							<img src="http://localhost/arawannews/web/media/genmedia?w=400&h=400&wtm=0&mId=10" class="featured-img"/>
+						</a>
+						<div class="content-detail">
+							<h3>เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</h3>
+							<span>ปัจจุบันวิวัฒนาการความงามก้าวไกลไปค่อนข้างมาก โดยเฉพาะนวัตกรรม</span>
+						</div>
+					</div>
+				</div>
+				<div class="post post-secondary">
+					<div class="blog-data">
+						<div class="content-detail">
+							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
+						</div>
+					</div>
+				</div>
+				<div class="post post-secondary">
+					<div class="blog-data">
+						<div class="content-detail">
+							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
+						</div>
+					</div>
+				</div>
+				<div class="post post-secondary">
+					<div class="blog-data">
+						<div class="content-detail">
+							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3">
+				<div class="row headline">ภูมิภาค</div>
+				<div class="post">
+					<div class="blog-data">
+						<a href="#" style="z-index: 2;">
+							<img src="http://localhost/arawannews/web/media/genmedia?w=400&h=400&wtm=0&mId=10" class="featured-img"/>
+						</a>
+						<div class="content-detail">
+							<h3>เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</h3>
+							<span>ปัจจุบันวิวัฒนาการความงามก้าวไกลไปค่อนข้างมาก โดยเฉพาะนวัตกรรม</span>
+						</div>
+					</div>
+				</div>
+				<div class="post post-secondary">
+					<div class="blog-data">
+						<div class="content-detail">
+							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
+						</div>
+					</div>
+				</div>
+				<div class="post post-secondary">
+					<div class="blog-data">
+						<div class="content-detail">
+							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
+						</div>
+					</div>
+				</div>
+				<div class="post post-secondary">
+					<div class="blog-data">
+						<div class="content-detail">
+							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="row featured_posts">
+	<div class="container-fluid">
+		<div class="blog-data">
+			<div class="col-lg-3 col-md-3">
+				<div class="row headline">วัฒนธรรม</div>
+				<div class="post">
+					<div class="blog-data">
+						<a href="#" style="z-index: 2;">
+							<img src="http://localhost/arawannews/web/media/genmedia?w=400&h=400&wtm=0&mId=10" class="featured-img"/>
+						</a>
+						<div class="content-detail">
+							<h3>เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</h3>
+							<span>ปัจจุบันวิวัฒนาการความงามก้าวไกลไปค่อนข้างมาก โดยเฉพาะนวัตกรรม</span>
+						</div>
+					</div>
+				</div>
+				<div class="post post-secondary">
+					<div class="blog-data">
+						<div class="content-detail">
+							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
+						</div>
+					</div>
+				</div>
+				<div class="post post-secondary">
+					<div class="blog-data">
+						<div class="content-detail">
+							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
+						</div>
+					</div>
+				</div>
+				<div class="post post-secondary">
+					<div class="blog-data">
+						<div class="content-detail">
+							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3">
+				<div class="row headline">ไอที-นวัตกรรม</div>
+				<div class="post">
+					<div class="blog-data">
+						<a href="#" style="z-index: 2;">
+							<img src="http://localhost/arawannews/web/media/genmedia?w=400&h=400&wtm=0&mId=10" class="featured-img"/>
+						</a>
+						<div class="content-detail">
+							<h3>เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</h3>
+							<span>ปัจจุบันวิวัฒนาการความงามก้าวไกลไปค่อนข้างมาก โดยเฉพาะนวัตกรรม</span>
+						</div>
+					</div>
+				</div>
+				<div class="post post-secondary">
+					<div class="blog-data">
+						<div class="content-detail">
+							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
+						</div>
+					</div>
+				</div>
+				<div class="post post-secondary">
+					<div class="blog-data">
+						<div class="content-detail">
+							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
+						</div>
+					</div>
+				</div>
+				<div class="post post-secondary">
+					<div class="blog-data">
+						<div class="content-detail">
+							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3">
+				<div class="row headline">นวัตกรรม</div>
+				<div class="post">
+					<div class="blog-data">
+						<a href="#" style="z-index: 2;">
+							<img src="http://localhost/arawannews/web/media/genmedia?w=400&h=400&wtm=0&mId=10" class="featured-img"/>
+						</a>
+						<div class="content-detail">
+							<h3>เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</h3>
+							<span>ปัจจุบันวิวัฒนาการความงามก้าวไกลไปค่อนข้างมาก โดยเฉพาะนวัตกรรม</span>
+						</div>
+					</div>
+				</div>
+				<div class="post post-secondary">
+					<div class="blog-data">
+						<div class="content-detail">
+							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
+						</div>
+					</div>
+				</div>
+				<div class="post post-secondary">
+					<div class="blog-data">
+						<div class="content-detail">
+							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
+						</div>
+					</div>
+				</div>
+				<div class="post post-secondary">
+					<div class="blog-data">
+						<div class="content-detail">
+							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3">
+				<div class="row headline">สุขภาพ</div>
+				<div class="post">
+					<div class="blog-data">
+						<a href="#" style="z-index: 2;">
+							<img src="http://localhost/arawannews/web/media/genmedia?w=400&h=400&wtm=0&mId=10" class="featured-img"/>
+						</a>
+						<div class="content-detail">
+							<h3>เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</h3>
+							<span>ปัจจุบันวิวัฒนาการความงามก้าวไกลไปค่อนข้างมาก โดยเฉพาะนวัตกรรม</span>
+						</div>
+					</div>
+				</div>
+				<div class="post post-secondary">
+					<div class="blog-data">
+						<div class="content-detail">
+							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
+						</div>
+					</div>
+				</div>
+				<div class="post post-secondary">
+					<div class="blog-data">
+						<div class="content-detail">
+							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
+						</div>
+					</div>
+				</div>
+				<div class="post post-secondary">
+					<div class="blog-data">
+						<div class="content-detail">
+							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="row featured_posts">
+	<div class="container-fluid">
+		<section>
+			<div class="row headline">สกู๊ปพิเศษ</div>
+			<div class="row">
+				<?php for ($i=1;$i<=4;$i++){?>
+				<div class="col-lg-3 col-md-3 post">
+				<div class="row inner" style="position: relative;">
+					<div class="second-header"><a href="#">การเมือง</a></div>
+					<a href="#" style="z-index: 2;">
+					<img src="http://localhost/arawannews/web/media/genmedia?w=400&h=400&wtm=0&mId=10" class="featured-img">
+					
+					<div class="row m0 content">
+						<h2 class="title">
+							<a class="dropShadow" href="#">ทดสอบระบบการกรอกข่าว</a>
+						</h2>
+					</div>
+					</a>
+				</div>
+				
+					
+				</div>
+				<?php }?>
+			</div>
+		</section>
+	</div>
+</section>
+
+<?php if(false):?>
 <a href="#all_posts" id="tap2allpost"><i class="fa fa-sort"></i></a>
 <?php if (!empty($model['others'])):?>
 <section class="row all_posts" id="all_posts">
@@ -223,7 +719,8 @@ $baseUriCss = $baseUri.'/assets/theme';
    
 </section>  
 <?php endif;?>
-
+<?php endif;?>
+<?php if(false):?>
 <?php if (!empty($model['howTo'])):?>
 <section class="row video_posts" id="popular_videos">
         <div class="container-fluid">
@@ -252,4 +749,5 @@ $baseUriCss = $baseUri.'/assets/theme';
         </div>
     </section>
     <?php endif;?>
+ <?php endif;?>
     <!--Popular Videos Here-->

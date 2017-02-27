@@ -74,7 +74,7 @@ class OnlineConfig {
 						'gallery'
 				]
 			],
-			self::ONLINE_ADVERTISEMENT => [
+			/* self::ONLINE_ADVERTISEMENT => [
 				'section' => 'ads',
 				'title' => 'Advertisement',
 				'limit' => 15,
@@ -82,7 +82,7 @@ class OnlineConfig {
 						'content',
 						'gallery'
 				]
-			],
+			], */
 
 				
 	];

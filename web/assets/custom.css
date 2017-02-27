@@ -13,3 +13,51 @@
 .marginTop15{
 	margin-top: 15px !important;
 }
+.headline{
+	background-color: #F03F37;
+	padding: 10px 15px;
+	color: #FFFFFF;
+	font-size: 16px;
+}
+.blog-data{
+	margin-left: -10px;
+	margin-right: -10px;
+}
+.content-detail{
+	padding: 10px 15px;
+}
+.post-secondary{
+	border-top: 1px solid #DDDDDD;
+}
+.second-header{
+	position: absolute;top: 0;background-color: #000;opacity:0.8;z-index: 10;width: 100%;color: #FFFFFF;padding: 15px;
+}
+.second-header a{
+	color: #FFFFFF;font-size: 16px;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 , .dropShadow, .headline, .second-header a, .hotTopicMenu, .navbar-nav a, .nav a{
+	font-family: 'Kanit' !important;
+}
+.headline{
+	font-size: 28px;
+}
+.second-header{
+	font-size: 20px;
+}
+.font20{
+	font-size: 20px !important;
+}
+.logo-arawan{
+	width: 90px;
+}
+@media screen and (max-width: 480px) {
+    .logo-arawan{
+		width: 60px !important;
+	}
+	.navbar-fixed-top{
+		height: 66px !important;
+	}
+}
+.content-detail a{
+	color: #333333;
+}

@@ -36,7 +36,7 @@ $baseUriCss = $baseUri.'/assets/theme';
     <meta name="theme-color" content="#e74c3c">
     
     <!--Bootstrap-->
-    <link rel="stylesheet" href="<?= $baseUriCss?>/css/bootstrap.min.css">    
+    <link rel="stylesheet" href="<?= $baseUriCss?>/css/bootstrap.min.css">
     
     <!-- Vendors -->
     <link rel="stylesheet" href="<?= $baseUriCss?>/vendors/owl.carousel/owl.carousel.css">
@@ -45,14 +45,12 @@ $baseUriCss = $baseUri.'/assets/theme';
     <link rel="stylesheet" href="<?= $baseUriCss?>/vendors/flexslider/flexslider.css">
     <link rel="stylesheet" href="<?= $baseUriCss?>/vendors/mCustomScrollbar/jquery.mCustomScrollbar.css">
     
-    <!--Fonts-->
-    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-    
     <!--Theme Styles-->
-    <link rel="stylesheet" href="<?= $baseUriCss?>/css/default/style.css">
+    <link rel="stylesheet" href="<?= $baseUriCss?>/css/default/style.css?v=8">
     <link rel="stylesheet" href="<?= $baseUriCss?>/css/responsive/responsive.css">
-    <link rel="stylesheet" href="<?= $baseUri?>/assets/custom.css">
+     <link rel="stylesheet" href="<?= $baseUri?>/assets/stylesheet.css?v=6" type="text/css" charset="utf-8" />
+    <link rel="stylesheet" href="<?= $baseUri?>/assets/custom.css?v=25">
+   
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>

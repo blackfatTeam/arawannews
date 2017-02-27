@@ -14,9 +14,9 @@ use app\lib\Workflow;
 }
 </style>
 <div style="margin: 25px;">
-	<h4 class="category politics">
-	<a href="javascript:;" style="font-size: 30px !important;color: #333333;"><?php echo $sectionTitle?$sectionTitle['title']:''?></a>
-</h4>
+	<h2 class="category politics">
+	<?php echo $sectionTitle?$sectionTitle['title']:''?>
+	</h2>
 </div>
 <hr>
 <?php if (!empty($model)):?>

@@ -420,20 +420,21 @@ button:hover {
 .header1 .navbar {
   margin: 0;
   border: none;
-  height: 66px;
-  background: #13141b;
+  height: 110px;
+  background: #F03F37;
   color: rgba(255, 255, 255, 0.5);
   z-index: 999;
 }
 .header1 .navbar .container-fluid {
   padding: 0 10px;
+  background-color: #F1592A;
 }
 .header1 .navbar .navbar-header {
   z-index: 2;
 }
 .header1 .navbar .navbar-header .logo_container {
   float: left;
-  background: #f31d12;
+  background: #F1592A;
   margin-left: -10px;
   margin-right: 35px;
   min-width: 140px;
@@ -451,7 +452,7 @@ button:hover {
   padding-bottom: 0;
   padding-left: 7px;
   padding-right: 30px;
-  background: #f31d12;
+  background: #F1592A;
   color: #fff;
   text-transform: uppercase;
   text-shadow: none;
@@ -465,7 +466,7 @@ button:hover {
   line-height: 66px;
 }
 .header1 .navbar .follow_nav .menuTitle {
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Kanit' !important;
   font-weight: 400;
   color: #FFF;
   margin-right: 8px;
@@ -1177,11 +1178,10 @@ button:hover {
 }
 .featured_posts .post .content .title a {
   display: inline-block;
-  font-size: 36px;
+  font-size: 30px;
   color: #fff;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Kanit' !important;
   font-weight: bold;
-  line-height: 46px;
   text-transform: uppercase;
 }
 .featured_posts .post .content .post_meta li + li {

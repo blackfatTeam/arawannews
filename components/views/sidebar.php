@@ -41,8 +41,7 @@ $uri = Yii::$app->controller->getRoute();
 					<div id="slideMenu_trigger">
 						<img src="<?= $baseUriCss?>/images/navigation/logo/bars.png" alt="">
 					</div>
-					<a class="navbar-brand" href="<?php echo Url::toRoute(['/']);?>"
-						title="Age - Well Featured Magazine Template">Age</a>
+					<a class="navbar-brand" href="<?php echo Url::toRoute(['/']);?>"><img src="<?php echo $baseUri?>/assets/img/arawan-logo.png" class="logo-arawan" /></a>
 				</div>
 			</div>
 

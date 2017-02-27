@@ -13,7 +13,6 @@ $uri = Yii::$app->controller->getRoute ();
 
 <!--Copyright Here-->
     <section class="row copyright-row">
-        <a href="index.html" class="logo fleft">Age</a>
         <div class="follow_nav fleft">
             <div class="fleft menuTitle">Follow Us:</div>
             <ul class="nav nav-pills">
