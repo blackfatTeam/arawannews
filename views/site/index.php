@@ -152,103 +152,109 @@ $baseUriCss = $baseUri.'/assets/theme';
 <?php endif;?>
 
 
-
+<?php if (!empty($model['hottopic'])):?>
 <section class="row featured_posts">
 	<div class="container-fluid">
 		<section>
 			<div class="row headline">เจาะประเด็น</div>
 			<div class="row">
-				<?php for ($i=1;$i<=4;$i++){?>
+				<?php foreach ($model['hottopic'] as $lst):?>	
 				<div class="col-lg-3 col-md-3 post">
 				<div class="blog-data">
-						<a href="#" style="z-index: 2;">
-							<img src="http://localhost/arawannews/web/media/genmedia?w=400&h=400&wtm=0&mId=10" class="featured-img"/>
+						<a href="<?php echo Workflow::getLink($lst)?>" style="z-index: 2;">
+							<?php echo Html::img(Workflow::getUripreview([
+		'width'=>400,
+		'height'=>400,
+		'wartermark'=>'',
+		'mediaId'=>$lst['thumbnail']]),['class'=>'featured-img', 'alt' => $lst['title']])?>
 						</a>
 						<div class="content-detail">
-							<h3>เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</h3>
-							<span>ปัจจุบันวิวัฒนาการความงามก้าวไกลไปค่อนข้างมาก โดยเฉพาะนวัตกรรม</span>
+							<a href="<?php echo Workflow::getLink($lst)?>"><h3><?php echo $lst['title']?$lst['title']:''?></h3></a>
+							<span><?php echo $lst['abstract']?iconv_substr($lst['abstract'],0,60, "UTF-8"):'';?></span>
 						</div>
 					</div>
 				</div>
-				<?php }?>
+				<?php endforeach;?>
 			</div>
 		</section>
 	</div>
 </section>
+<?php endif;?>
 
 <section class="row featured_posts">
 	<div class="container-fluid">
 		<div class="blog-data">
+			<?php if (!empty($model['pol'])):?>
 			<div class="col-lg-3 col-md-3">
 				<div class="row headline">การเมือง</div>
+				<?php 
+				$spliceModel = array_splice($model['pol'], 0,1);
+				foreach ($spliceModel as $lst):?>
 				<div class="post">
 					<div class="blog-data">
-						<a href="#" style="z-index: 2;">
-							<img src="http://localhost/arawannews/web/media/genmedia?w=400&h=400&wtm=0&mId=10" class="featured-img"/>
+						<a href="<?php echo Workflow::getLink($lst)?>" style="z-index: 2;">
+							<?php echo Html::img(Workflow::getUripreview([
+		'width'=>400,
+		'height'=>400,
+		'wartermark'=>'',
+		'mediaId'=>$lst['thumbnail']]),['class'=>'featured-img', 'alt' => $lst['title']])?>
 						</a>
 						<div class="content-detail">
-							<h3>เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</h3>
-							<span>ปัจจุบันวิวัฒนาการความงามก้าวไกลไปค่อนข้างมาก โดยเฉพาะนวัตกรรม</span>
+							<a href="<?php echo Workflow::getLink($lst)?>"><h3><?php echo $lst['title']?$lst['title']:''?></h3></a>
+							<span><?php echo $lst['abstract']?iconv_substr($lst['abstract'],0,60, "UTF-8"):'';?></span>
 						</div>
 					</div>
 				</div>
+				<?php endforeach;?>
+				<?php 
+				$spliceModel = array_splice($model['pol'], 0,3);
+				foreach ($spliceModel as $lst):?>
 				<div class="post post-secondary">
 					<div class="blog-data">
 						<div class="content-detail">
-							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
+							<a href="<?php echo Workflow::getLink($lst)?>"><?php echo $lst['title']?$lst['title']:''?></a>
 						</div>
 					</div>
 				</div>
-				<div class="post post-secondary">
-					<div class="blog-data">
-						<div class="content-detail">
-							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
-						</div>
-					</div>
-				</div>
-				<div class="post post-secondary">
-					<div class="blog-data">
-						<div class="content-detail">
-							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
-						</div>
-					</div>
-				</div>
+				<?php endforeach;?>
+				
 			</div>
+			<?php endif;?>
+			<?php if (!empty($model['economy'])):?>
 			<div class="col-lg-3 col-md-3">
 				<div class="row headline">เศรษฐกิจ</div>
+				<?php 
+				$spliceModel = array_splice($model['economy'], 0,1);
+				foreach ($spliceModel as $lst):?>
 				<div class="post">
 					<div class="blog-data">
-						<a href="#" style="z-index: 2;">
-							<img src="http://localhost/arawannews/web/media/genmedia?w=400&h=400&wtm=0&mId=10" class="featured-img"/>
+						<a href="<?php echo Workflow::getLink($lst)?>" style="z-index: 2;">
+							<?php echo Html::img(Workflow::getUripreview([
+		'width'=>400,
+		'height'=>400,
+		'wartermark'=>'',
+		'mediaId'=>$lst['thumbnail']]),['class'=>'featured-img', 'alt' => $lst['title']])?>
 						</a>
 						<div class="content-detail">
-							<h3>เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</h3>
-							<span>ปัจจุบันวิวัฒนาการความงามก้าวไกลไปค่อนข้างมาก โดยเฉพาะนวัตกรรม</span>
+							<a href="<?php echo Workflow::getLink($lst)?>"><h3><?php echo $lst['title']?$lst['title']:''?></h3></a>
+							<span><?php echo $lst['abstract']?iconv_substr($lst['abstract'],0,60, "UTF-8"):'';?></span>
 						</div>
 					</div>
 				</div>
+				<?php endforeach;?>
+				<?php 
+				$spliceModel = array_splice($model['economy'], 0,3);
+				foreach ($spliceModel as $lst):?>
 				<div class="post post-secondary">
 					<div class="blog-data">
 						<div class="content-detail">
-							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
+							<a href="<?php echo Workflow::getLink($lst)?>"><?php echo $lst['title']?$lst['title']:''?></a>
 						</div>
 					</div>
 				</div>
-				<div class="post post-secondary">
-					<div class="blog-data">
-						<div class="content-detail">
-							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
-						</div>
-					</div>
-				</div>
-				<div class="post post-secondary">
-					<div class="blog-data">
-						<div class="content-detail">
-							<a href="#">เปิดตัวสมาร์ทโฟนรุ่นล่าสุดจากตระกูล Z SERIES</a>
-						</div>
-					</div>
-				</div>
+				<?php endforeach;?>
 			</div>
+			<?php endif;?>
 			<div class="col-lg-3 col-md-3">
 				<div class="row headline">อาชญากรรม</div>
 				<div class="post">

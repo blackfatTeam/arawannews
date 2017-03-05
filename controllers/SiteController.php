@@ -75,7 +75,6 @@ class SiteController extends Controller
 
     		foreach ($arrOnline as $lst){
     			$contents = null;
-    			
     			$query = Contents::find();
     			/* if ($lst->type == Workflow::TYPE_CONTENT){
     				$query = Contents::find();
@@ -91,31 +90,51 @@ class SiteController extends Controller
     				if ($contents->status == Workflow::STATUS_PUBLISHED){
     					if ($lst->section == 'home'){
     						$key = 'home';
-    					}elseif ($lst->section == 'howto'){
-    						$key = 'howTo';
-    					}else{
-    						$key = 'others';
+    					}elseif ($lst->section == 'hottopic'){
+    						$key = 'hottopic';
+    					}elseif ($lst->section == 'pol'){
+    						$key = 'pol';
+    					}elseif ($lst->section == 'economy'){
+    						$key = 'economy';
+    					}elseif ($lst->section == 'crime'){
+    						$key = 'crime';
+    					}elseif ($lst->section == 'oversea'){
+    						$key = 'oversea';
+    					}elseif ($lst->section == 'royal'){
+    						$key = 'royal';
+    					}elseif ($lst->section == 'sport'){
+    						$key = 'sport';
+    					}elseif ($lst->section == 'region'){
+    						$key = 'region';
+    					}elseif ($lst->section == 'food'){
+    						$key = 'food';
+    					}elseif ($lst->section == 'shopping'){
+    						$key = 'shopping';
+    					}elseif ($lst->section == 'horoscope'){
+    						$key = 'horoscope';
+    					}elseif ($lst->section == 'travel'){
+    						$key = 'travel';
     					}
-    				
-		    			$model[$key][] = [
-		    					'id' => $contents->id,
-		    					'title' => $contents->title,
-		    					'abstract' => $contents->abstract,
-		    					'thumbnail' => $contents->thumbnail,
-		    					'orderNo' => $lst->orderNo,
-		    					'type' => $lst->type,
-		    					'publishTime' => $contents->publishTime,
-		    					'theme' => $contents->theme,
-		    					'postTitle' => $contents->postTitle,
-		    					'categoryId' => $contents->categoryId
-		    			];
+    					if (!empty($key)){
+			    			$model[$key][] = [
+			    					'id' => $contents->id,
+			    					'title' => $contents->title,
+			    					'abstract' => $contents->abstract,
+			    					'thumbnail' => $contents->thumbnail,
+			    					'orderNo' => $lst->orderNo,
+			    					'type' => $lst->type,
+			    					'publishTime' => $contents->publishTime,
+			    					'theme' => $contents->theme,
+			    					'postTitle' => $contents->postTitle,
+			    					'categoryId' => $contents->categoryId
+			    			];
+    					}
     					
     				}
     			}
     		}
     	}
 
-    	
         return $this->render('index', [
         		'model' => $model
         ]);

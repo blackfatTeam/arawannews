@@ -46,7 +46,7 @@ $baseUriCss = $baseUri.'/assets/theme';
     <link rel="stylesheet" href="<?= $baseUriCss?>/vendors/mCustomScrollbar/jquery.mCustomScrollbar.css">
     
     <!--Theme Styles-->
-    <link rel="stylesheet" href="<?= $baseUriCss?>/css/default/style.css?v=8">
+    <link rel="stylesheet" href="<?= $baseUriCss?>/css/default/style.css?v=14">
     <link rel="stylesheet" href="<?= $baseUriCss?>/css/responsive/responsive.css">
      <link rel="stylesheet" href="<?= $baseUri?>/assets/stylesheet.css?v=6" type="text/css" charset="utf-8" />
     <link rel="stylesheet" href="<?= $baseUri?>/assets/custom.css?v=25">
