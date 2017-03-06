@@ -75,6 +75,7 @@ $uri = Yii::$app->controller->getRoute();
 						class="icon-bar"></span>
 				</button>
 				<div id="top_nav" class="collapse navbar-collapse fleft">
+				<?php if (false):?>
 					<ul class="nav navbar-nav">
 						<li><a href="javascript:;">หมวดข่าว</a>
 							<ul class="nav">
@@ -88,6 +89,7 @@ $uri = Yii::$app->controller->getRoute();
 						<li><a href="<?php echo Url::toRoute(['/']);?>">หน้าหลัก</a></li>
 						
 					</ul>
+				<?php endif;?>
 				</div>
 			</div>
 		</div>

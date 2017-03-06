@@ -45,6 +45,7 @@ $uri = Yii::$app->controller->getRoute ();
 	
 	<div class="row m0 categories">
 		<h3 class="widgetTitle">categories</h3>
+		<?php if(false):?>
 		<ul class="nav">
 			<?php foreach (OnlineConfig::$arrSection as $key => $lst):?>
 			<?php if ($key !== 'home'):?>
@@ -52,6 +53,7 @@ $uri = Yii::$app->controller->getRoute ();
 			<?php endif;?>
 			<?php endforeach;?>
 		</ul>
+		<?php endif;?>
 	</div>
 	<!-- <div class="row m0 navByCat">
 		<ul class="nav">

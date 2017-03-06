@@ -10,6 +10,7 @@ use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\Contents;
 use app\models\Online;
+use app\models\Category;
 use app\lib\Workflow;
 use app\lib\OnlineConfig;
 class SiteController extends Controller
@@ -76,44 +77,50 @@ class SiteController extends Controller
     		foreach ($arrOnline as $lst){
     			$contents = null;
     			$query = Contents::find();
-    			/* if ($lst->type == Workflow::TYPE_CONTENT){
-    				$query = Contents::find();
-    			}elseif ($lst->type == Workflow::TYPE_GALLARY){
-    				$query = Contents::find();
-    			} */
     			$query->andWhere('id = :id', [':id' => $lst->contentId]);
     			$query->andWhere('status = :status', [':status' => Workflow::STATUS_PUBLISHED]);
     			$query->andWhere('publishTime <= :publishTime', [':publishTime' => $currentTime]);
     			$contents = $query->one();
 
+    			
     			if (!empty($contents)){
     				if ($contents->status == Workflow::STATUS_PUBLISHED){
-    					if ($lst->section == 'home'){
-    						$key = 'home';
-    					}elseif ($lst->section == 'hottopic'){
+    					if ($lst->categoryId == OnlineConfig::ONLINE_HIGHLIGHT){
+    						$key = 'highlight';
+    					}elseif ($lst->categoryId == OnlineConfig::ONLINE_HOTTOPIC){
     						$key = 'hottopic';
-    					}elseif ($lst->section == 'pol'){
+    					}elseif ($lst->categoryId == OnlineConfig::ONLINE_POL){
     						$key = 'pol';
-    					}elseif ($lst->section == 'economy'){
+    					}elseif ($lst->categoryId == OnlineConfig::ONLINE_ENT){
+    						$key = 'ent';
+    					}elseif ($lst->categoryId == OnlineConfig::ONLINE_ECONOMY){
     						$key = 'economy';
-    					}elseif ($lst->section == 'crime'){
+    					}elseif ($lst->categoryId == OnlineConfig::ONLINE_CRIME){
     						$key = 'crime';
-    					}elseif ($lst->section == 'oversea'){
+    					}elseif ($lst->categoryId == OnlineConfig::ONLINE_OVERSEA){
     						$key = 'oversea';
-    					}elseif ($lst->section == 'royal'){
+    					}elseif ($lst->categoryId == OnlineConfig::ONLINE_ROYAL){
     						$key = 'royal';
-    					}elseif ($lst->section == 'sport'){
+    					}elseif ($lst->categoryId == OnlineConfig::ONLINE_SPORT){
     						$key = 'sport';
-    					}elseif ($lst->section == 'region'){
+    					}elseif ($lst->categoryId == OnlineConfig::ONLINE_REGION){
     						$key = 'region';
-    					}elseif ($lst->section == 'food'){
+    					}elseif ($lst->categoryId == OnlineConfig::ONLINE_FOOD){
     						$key = 'food';
-    					}elseif ($lst->section == 'shopping'){
+    					}elseif ($lst->categoryId == OnlineConfig::ONLINE_SHOPPING){
     						$key = 'shopping';
-    					}elseif ($lst->section == 'horoscope'){
+    					}elseif ($lst->categoryId == OnlineConfig::ONLINE_HORO){
     						$key = 'horoscope';
-    					}elseif ($lst->section == 'travel'){
+    					}elseif ($lst->categoryId == OnlineConfig::ONLINE_TRAVEL){
     						$key = 'travel';
+    					}elseif ($lst->categoryId == OnlineConfig::ONLINE_TECH){
+    						$key = 'tech';
+    					}elseif ($lst->categoryId == OnlineConfig::ONLINE_HEALTH){
+    						$key = 'health';
+    					}elseif ($lst->categoryId == OnlineConfig::ONLINE_SOCIAL){
+    						$key = 'social';
+    					}elseif ($lst->categoryId == OnlineConfig::ONLINE_IT){
+    						$key = 'it';
     					}
     					if (!empty($key)){
 			    			$model[$key][] = [
