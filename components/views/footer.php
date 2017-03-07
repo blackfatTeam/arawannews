@@ -44,12 +44,12 @@ $uri = Yii::$app->controller->getRoute ();
 	</div>
 	
 	<div class="row m0 categories">
-		<h3 class="widgetTitle">categories</h3>
-		<?php if(false):?>
+		<h3 class="widgetTitle">หมวดหมู่</h3>
+		<?php if($arrCategory):?>
 		<ul class="nav">
-			<?php foreach (OnlineConfig::$arrSection as $key => $lst):?>
+			<?php foreach ($arrCategory as $key => $lst):?>
 			<?php if ($key !== 'home'):?>
-			<li><a href="<?php echo Url::toRoute(['category/'.$key]);?>"><?php echo $lst['title']?></a></li>
+			<li><a href="<?php echo Url::toRoute(['category/'.$key]);?>"><?php echo $lst?></a></li>
 			<?php endif;?>
 			<?php endforeach;?>
 		</ul>

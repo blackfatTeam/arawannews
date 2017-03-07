@@ -47,9 +47,9 @@ $baseUriCss = $baseUri.'/assets/theme';
     
     <!--Theme Styles-->
     <link rel="stylesheet" href="<?= $baseUriCss?>/css/default/style.css?v=14">
-    <link rel="stylesheet" href="<?= $baseUriCss?>/css/responsive/responsive.css">
+    <link rel="stylesheet" href="<?= $baseUriCss?>/css/responsive/responsive.css?v=2">
      <link rel="stylesheet" href="<?= $baseUri?>/assets/stylesheet.css?v=6" type="text/css" charset="utf-8" />
-    <link rel="stylesheet" href="<?= $baseUri?>/assets/custom.css?v=25">
+    <link rel="stylesheet" href="<?= $baseUri?>/assets/custom.css?v=4">
    
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>

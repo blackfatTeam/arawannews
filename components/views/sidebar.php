@@ -75,14 +75,13 @@ $uri = Yii::$app->controller->getRoute();
 						class="icon-bar"></span>
 				</button>
 				<div id="top_nav" class="collapse navbar-collapse fleft">
-				<?php if (false):?>
+				<?php if ($arrCategory):?>
 					<ul class="nav navbar-nav">
 						<li><a href="javascript:;">หมวดข่าว</a>
 							<ul class="nav">
-								<?php foreach (OnlineConfig::$arrSection as $key => $lst):?>
-								<?php if ($key !== 'home'):?>
-								<li><a href="<?php echo Url::toRoute(['category/'.$key]);?>"><?php echo $lst['title']?></a></li>
-								<?php endif;?>
+								<?php 
+								foreach ($arrCategory as $key => $lst):?>
+								<li><a href="<?php echo Url::toRoute(['category/'.$key]);?>"><?php echo $lst?></a></li>
 								<?php endforeach;?>
 							</ul>
 						</li>

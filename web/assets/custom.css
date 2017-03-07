@@ -14,10 +14,28 @@
 	margin-top: 15px !important;
 }
 .headline{
-	background-color: #F03F37;
-	padding: 10px 15px;
 	color: #FFFFFF;
 	font-size: 16px;
+}
+.highlightText{
+	color: #FFFFFF;
+	font-size: 16px;
+	background-color: #F03F37;
+	padding: 15px;
+	width: 150px;
+	font-size: 24px;
+}
+.headlineBg{
+	background-color: #F03F37;
+	padding:10px;
+}
+.highlightLink{
+	
+	color:#FFFFFF;
+}
+.highlightBg{
+	background-color: #333333;
+	padding:10px 10px 10px 0;
 }
 .blog-data{
 	margin-left: -10px;
@@ -33,9 +51,9 @@
 	position: absolute;top: 0;background-color: #000;opacity:0.8;z-index: 10;width: 100%;color: #FFFFFF;padding: 15px;
 }
 .second-header a{
-	color: #FFFFFF;font-size: 16px;
+	color: #FFFFFF;font-size: 22px;
 }
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 , .dropShadow, .headline, .second-header a, .hotTopicMenu, .navbar-nav a, .nav a{
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 , .dropShadow, .highlightLink, .headline, .highlightText, .second-header a, .hotTopicMenu, .navbar-nav a, .nav a{
 	font-family: 'Kanit' !important;
 }
 .headline{

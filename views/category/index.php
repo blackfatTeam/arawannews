@@ -15,7 +15,7 @@ use app\lib\Workflow;
 </style>
 <div style="margin: 25px;">
 	<h2 class="category politics">
-	<?php echo $sectionTitle?$sectionTitle['title']:''?>
+	<?php echo $sectionTitle?$sectionTitle:''?>
 	</h2>
 </div>
 <hr>
@@ -35,7 +35,7 @@ use app\lib\Workflow;
 		'wartermark'=>'',
 		'mediaId'=>$lst['thumbnail']]),['class'=>'featured-img', 'alt' => $lst['title']])?>
                         <div class="row m0 content">
-                            <span class="category sports"><?php echo $lst['categoryId']?Workflow::$arrCategory[$lst['categoryId']]:''?></span>
+                            <!-- <span class="category sports"><?php //echo $lst['categoryId']?Workflow::$arrCategory[$lst['categoryId']]:''?></span> -->
                             <h2 class="title dropShadow"><a href="<?php echo Workflow::getLink($lst)?>"><?php echo $lst['title']?></a></h2>
                             <ul class="post_meta nav nav-pills">
                                 <li><a href="javascript:;"><i class="fa fa-clock-o"></i> <?php echo DateUtil::th_date('j F Y, H:i น.', strtotime($lst['publishTime']))?></a></li>
@@ -60,7 +60,7 @@ use app\lib\Workflow;
 		'wartermark'=>'',
 		'mediaId'=>$lst['thumbnail']]),['class'=>'featured-img', 'alt' => $lst['title']])?>
                         <div class="row m0 content">
-                            <span class="category sports"><?php echo $lst['categoryId']?Workflow::$arrCategory[$lst['categoryId']]:''?></span>
+                            <!-- <span class="category sports"><?php //echo $lst['categoryId']?Workflow::$arrCategory[$lst['categoryId']]:''?></span> -->
                             <h2 class="title dropShadow"><a href="<?php echo Workflow::getLink($lst)?>"><?php echo $lst['title']?></a></h2>
                             <ul class="post_meta nav nav-pills">
                                 <li><a href="javascript:;"><i class="fa fa-clock-o"></i> <?php echo DateUtil::th_date('j F Y, H:i น.', strtotime($lst['publishTime']))?></a></li>

@@ -7,6 +7,7 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\Contents;
+use app\models\Category;
 use app\models\Media;
 use app\lib\Workflow;
 use app\models\Relatecontent;
@@ -25,12 +26,16 @@ class CategoryController extends Controller
     	if (empty($section)){
     		$section = $request->get('section');
     	}
-	
-    	$sectionTitle = $section?OnlineConfig::$arrSection[$section]:'';
+    	$category = null;
+    	if (!empty($section)){
+    		$category = Category::find()->where(['id'=>$section])->one();
+    	}
+    	$sectionTitle = $category?$category->name:'';
 
     	$query = Online::find();
     	$query->andWhere('web = :web', [':web' => $web]);
-    	$query->andWhere('section = :section', [':section' => $section]);
+    	//$query->andWhere('section = :section', [':section' => $section]);
+    	$query->andWhere('categoryId = :categoryId', [':categoryId' => $section]);
     	$query->orderBy('orderNo ASC');
     	$arrOnline = $query->all();
     	
@@ -38,13 +43,9 @@ class CategoryController extends Controller
     	if (!empty($arrOnline)){
 
     		foreach ($arrOnline as $lst){
-    			$contents = null;
-    			if ($lst->type == Workflow::TYPE_CONTENT){
-    				$contents = Contents::find()->where(['id'=>$lst->contentId])->one();
-    			}elseif ($lst->type == Workflow::TYPE_GALLARY){
-    				$contents = Gallary::find()->where(['id'=>$lst->contentId])->one();
-    			}
-    			
+ 
+    			$contents = Contents::find()->where(['id'=>$lst->contentId])->one();
+ 			
     			if (!empty($contents)){
     				if ($contents->status == Workflow::STATUS_PUBLISHED){
     				

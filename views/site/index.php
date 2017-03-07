@@ -5,6 +5,7 @@ use app\lib\Workflow;
 use yii\bootstrap\Html;
 $baseUri = Yii::getAlias('@web');
 $baseUriCss = $baseUri.'/assets/theme';
+use yii\helpers\Url;
 ?>
 <style>
 .featured_posts span.category{
@@ -18,7 +19,7 @@ $baseUriCss = $baseUri.'/assets/theme';
 <?php if (!empty($model['highlight'])):?>
 <section class="row featured_posts">
 	<div class="container-fluid">
-
+		<div class="row highlightBg"><div class="highlightText"><a href="<?php echo Url::toRoute(['category/'.'1']);?>" class="highlightLink">เกาะกระแส</a></div></div>
 		<div class="row">
 			<div class="col-lg-6 col-md-6 post">
 				<?php $arrModel = array_splice($model['highlight'], 0 ,1);?>
@@ -156,7 +157,7 @@ $baseUriCss = $baseUri.'/assets/theme';
 <section class="row featured_posts">
 	<div class="container-fluid">
 		<section>
-			<div class="row headline">เจาะประเด็น</div>
+			<div class="row headlineBg"><a href="<?php echo Url::toRoute(['category/'.'2']);?>" class="headline">เจาะประเด็น</a></div>
 			<div class="row">
 				<?php foreach ($model['hottopic'] as $lst):?>	
 				<div class="col-lg-3 col-md-3 post">
@@ -186,7 +187,7 @@ $baseUriCss = $baseUri.'/assets/theme';
 		<div class="blog-data">
 			<?php if (!empty($model['pol'])):?>
 			<div class="col-lg-3 col-md-3">
-				<div class="row headline">การเมือง</div>
+				<div class="row headlineBg"><a href="<?php echo Url::toRoute(['category/'.'4']);?>" class="headline">การเมือง</a></div>
 				<?php 
 				$spliceModel = array_splice($model['pol'], 0,1);
 				foreach ($spliceModel as $lst):?>
@@ -222,7 +223,7 @@ $baseUriCss = $baseUri.'/assets/theme';
 			<?php endif;?>
 			<?php if (!empty($model['economy'])):?>
 			<div class="col-lg-3 col-md-3">
-				<div class="row headline">เศรษฐกิจ</div>
+				<div class="row headlineBg"><a href="<?php echo Url::toRoute(['category/'.'5']);?>" class="headline">เศรษฐกิจ</a></div>
 				<?php 
 				$spliceModel = array_splice($model['economy'], 0,1);
 				foreach ($spliceModel as $lst):?>
@@ -257,7 +258,7 @@ $baseUriCss = $baseUri.'/assets/theme';
 			<?php endif;?>
 			<?php if (!empty($model['crime'])):?>
 			<div class="col-lg-3 col-md-3">
-				<div class="row headline">อาชญากรรม</div>
+				<div class="row headlineBg"><a href="<?php echo Url::toRoute(['category/'.'8']);?>" class="headline">อาชญากรรม</a></div>
 				<?php 
 				$spliceModel = array_splice($model['crime'], 0,1);
 				foreach ($spliceModel as $lst):?>
@@ -292,7 +293,7 @@ $baseUriCss = $baseUri.'/assets/theme';
 			<?php endif;?>
 			<?php if (!empty($model['oversea'])):?>
 			<div class="col-lg-3 col-md-3">
-				<div class="row headline">ต่างประเทศ</div>
+				<div class="row headlineBg"><a href="<?php echo Url::toRoute(['category/'.'9']);?>" class="headline">ต่างประเทศ</a></div>
 				<?php 
 				$spliceModel = array_splice($model['oversea'], 0,1);
 				foreach ($spliceModel as $lst):?>
@@ -334,7 +335,7 @@ $baseUriCss = $baseUri.'/assets/theme';
 		<div class="blog-data">
 			<?php if (!empty($model['royal'])):?>
 			<div class="col-lg-3 col-md-3">
-				<div class="row headline">พระราชสำนัก</div>
+				<div class="row headlineBg"><a href="<?php echo Url::toRoute(['category/'.'3']);?>" class="headline">พระราชสำนัก</a></div>
 				<?php 
 				$spliceModel = array_splice($model['royal'], 0,1);
 				foreach ($spliceModel as $lst):?>
@@ -369,7 +370,7 @@ $baseUriCss = $baseUri.'/assets/theme';
 			<?php endif;?>
 			<?php if (!empty($model['sport'])):?>
 			<div class="col-lg-3 col-md-3">
-				<div class="row headline">กีฬา</div>
+				<div class="row headlineBg"><a href="<?php echo Url::toRoute(['category/'.'7']);?>" class="headline">กีฬา</a></div>
 				<?php 
 				$spliceModel = array_splice($model['sport'], 0,1);
 				foreach ($spliceModel as $lst):?>
@@ -404,7 +405,7 @@ $baseUriCss = $baseUri.'/assets/theme';
 			<?php endif;?>
 			<?php if (!empty($model['ent'])):?>
 			<div class="col-lg-3 col-md-3">
-				<div class="row headline">บันเทิง</div>
+				<div class="row headlineBg"><a href="<?php echo Url::toRoute(['category/'.'6']);?>" class="headline">บันเทิง</a></div>
 				<?php 
 				$spliceModel = array_splice($model['ent'], 0,1);
 				foreach ($spliceModel as $lst):?>
@@ -439,7 +440,7 @@ $baseUriCss = $baseUri.'/assets/theme';
 			<?php endif;?>
 			<?php if (!empty($model['region'])):?>
 			<div class="col-lg-3 col-md-3">
-				<div class="row headline">ภูมิภาค</div>
+				<div class="row headlineBg"><a href="<?php echo Url::toRoute(['category/'.'10']);?>" class="headline">ภูมิภาค</a></div>
 				<?php 
 				$spliceModel = array_splice($model['region'], 0,1);
 				foreach ($spliceModel as $lst):?>
@@ -481,7 +482,7 @@ $baseUriCss = $baseUri.'/assets/theme';
 		<div class="blog-data">
 			<?php if (!empty($model['social'])):?>
 			<div class="col-lg-3 col-md-3">
-				<div class="row headline">วัฒนธรรม</div>
+				<div class="row headlineBg"><a href="<?php echo Url::toRoute(['category/'.'12']);?>" class="headline">วัฒนธรรม</a></div>
 				<?php 
 				$spliceModel = array_splice($model['social'], 0,1);
 				foreach ($spliceModel as $lst):?>
@@ -516,7 +517,7 @@ $baseUriCss = $baseUri.'/assets/theme';
 			<?php endif;?>
 			<?php if (!empty($model['it'])):?>
 			<div class="col-lg-3 col-md-3">
-				<div class="row headline">ไอที-นวัตกรรม</div>
+				<div class="row headlineBg"><a href="<?php echo Url::toRoute(['category/'.'13']);?>" class="headline">ไอที-นวัตกรรม</a></div>
 				<?php 
 				$spliceModel = array_splice($model['it'], 0,1);
 				foreach ($spliceModel as $lst):?>
@@ -551,7 +552,7 @@ $baseUriCss = $baseUri.'/assets/theme';
 			<?php endif;?>
 			<?php if (!empty($model['tech'])):?>
 			<div class="col-lg-3 col-md-3">
-				<div class="row headline">นวัตกรรม</div>
+				<div class="row headlineBg"><a href="<?php echo Url::toRoute(['category/'.'22']);?>" class="headline">นวัตกรรม</a></div>
 				<?php 
 				$spliceModel = array_splice($model['tech'], 0,1);
 				foreach ($spliceModel as $lst):?>
@@ -586,7 +587,7 @@ $baseUriCss = $baseUri.'/assets/theme';
 			<?php endif;?>
 			<?php if (!empty($model['health'])):?>
 			<div class="col-lg-3 col-md-3">
-				<div class="row headline">สุขภาพ</div>
+				<div class="row headlineBg"><a href="<?php echo Url::toRoute(['category/'.'14']);?>" class="headline">สุขภาพ</a></div>
 				<?php 
 				$spliceModel = array_splice($model['health'], 0,1);
 				foreach ($spliceModel as $lst):?>
@@ -626,26 +627,118 @@ $baseUriCss = $baseUri.'/assets/theme';
 <section class="row featured_posts">
 	<div class="container-fluid">
 		<section>
-			<div class="row headline">สกู๊ปพิเศษ</div>
+			<div class="row headlineBg"><a href="javascript:;" class="headline">สกู๊ปพิเศษ</a></div>
 			<div class="row">
-				<?php for ($i=1;$i<=4;$i++){?>
+				<?php if (!empty($model['food'])):?>
+				<?php 
+				$spliceModel = array_splice($model['food'], 0,1);
+				foreach ($spliceModel as $lst):?>
 				<div class="col-lg-3 col-md-3 post">
 				<div class="row inner" style="position: relative;">
-					<div class="second-header"><a href="#">การเมือง</a></div>
-					<a href="#" style="z-index: 2;">
-					<img src="http://localhost/arawannews/web/media/genmedia?w=400&h=400&wtm=0&mId=10" class="featured-img">
+					<div class="second-header"><a href="<?php echo Url::toRoute(['category/'.'18']);?>">กิน</a></div>
+
+					<a href="<?php echo Workflow::getLink($lst)?>" style="z-index: 2;">
+							<?php echo Html::img(Workflow::getUripreview([
+		'width'=>400,
+		'height'=>400,
+		'wartermark'=>'',
+		'mediaId'=>$lst['thumbnail']]),['class'=>'featured-img', 'alt' => $lst['title']])?>
+						
 					
 					<div class="row m0 content">
 						<h2 class="title">
-							<a class="dropShadow" href="#">ทดสอบระบบการกรอกข่าว</a>
+							<a class="dropShadow" href="<?php echo Workflow::getLink($lst)?>"><?php echo $lst['title']?$lst['title']:'';?></a>
 						</h2>
 					</div>
 					</a>
 				</div>
-				
-					
 				</div>
-				<?php }?>
+				<?php endforeach;?>
+				<?php endif;?>
+				
+				
+				<?php if (!empty($model['shopping'])):?>
+				<?php 
+				$spliceModel = array_splice($model['shopping'], 0,1);
+				foreach ($spliceModel as $lst):?>
+				<div class="col-lg-3 col-md-3 post">
+				<div class="row inner" style="position: relative;">
+					<div class="second-header"><a href="<?php echo Url::toRoute(['category/'.'20']);?>">ช๊อป</a></div>
+
+					<a href="<?php echo Workflow::getLink($lst)?>" style="z-index: 2;">
+							<?php echo Html::img(Workflow::getUripreview([
+		'width'=>400,
+		'height'=>400,
+		'wartermark'=>'',
+		'mediaId'=>$lst['thumbnail']]),['class'=>'featured-img', 'alt' => $lst['title']])?>
+						
+					
+					<div class="row m0 content">
+						<h2 class="title">
+							<a class="dropShadow" href="<?php echo Workflow::getLink($lst)?>"><?php echo $lst['title']?$lst['title']:'';?></a>
+						</h2>
+					</div>
+					</a>
+				</div>
+				</div>
+				<?php endforeach;?>
+				<?php endif;?>
+				
+				<?php if (!empty($model['horoscope'])):?>
+				<?php 
+				$spliceModel = array_splice($model['horoscope'], 0,1);
+				foreach ($spliceModel as $lst):?>
+				<div class="col-lg-3 col-md-3 post">
+				<div class="row inner" style="position: relative;">
+					<div class="second-header"><a href="<?php echo Url::toRoute(['category/'.'17']);?>">ดวง</a></div>
+
+					<a href="<?php echo Workflow::getLink($lst)?>" style="z-index: 2;">
+							<?php echo Html::img(Workflow::getUripreview([
+		'width'=>400,
+		'height'=>400,
+		'wartermark'=>'',
+		'mediaId'=>$lst['thumbnail']]),['class'=>'featured-img', 'alt' => $lst['title']])?>
+						
+					
+					<div class="row m0 content">
+						<h2 class="title">
+							<a class="dropShadow" href="<?php echo Workflow::getLink($lst)?>"><?php echo $lst['title']?$lst['title']:'';?></a>
+						</h2>
+					</div>
+					</a>
+				</div>
+				</div>
+				<?php endforeach;?>
+				<?php endif;?>
+				
+				<?php if (!empty($model['travel'])):?>
+				<?php 
+				$spliceModel = array_splice($model['travel'], 0,1);
+				foreach ($spliceModel as $lst):?>
+				<div class="col-lg-3 col-md-3 post">
+				<div class="row inner" style="position: relative;">
+					<div class="second-header"><a href="<?php echo Url::toRoute(['category/'.'19']);?>">เที่ยว-พักผ่อน</a></div>
+
+					<a href="<?php echo Workflow::getLink($lst)?>" style="z-index: 2;">
+							<?php echo Html::img(Workflow::getUripreview([
+		'width'=>400,
+		'height'=>400,
+		'wartermark'=>'',
+		'mediaId'=>$lst['thumbnail']]),['class'=>'featured-img', 'alt' => $lst['title']])?>
+						
+					
+					<div class="row m0 content">
+						<h2 class="title">
+							<a class="dropShadow" href="<?php echo Workflow::getLink($lst)?>"><?php echo $lst['title']?$lst['title']:'';?></a>
+						</h2>
+					</div>
+					</a>
+				</div>
+				</div>
+				<?php endforeach;?>
+				<?php endif;?>
+				
+				
 			</div>
 		</section>
 	</div>
@@ -726,34 +819,3 @@ $baseUriCss = $baseUri.'/assets/theme';
 </section>  
 <?php endif;?>
 <?php endif;?>
-<?php if(false):?>
-<?php if (!empty($model['howTo'])):?>
-<section class="row video_posts" id="popular_videos">
-        <div class="container-fluid">
-        	<h4 class="category politics">
-				<a href="javascript:;" style="font-size: 30px !important;">HOW TO</a>
-			</h4>
-			<br>
-            <div class="row">
-            	<?php foreach ($model['howTo'] as $lst):?>
-                <div class="col-sm-3 video-post">
-                    
-                    <?php echo Html::img(Workflow::getUripreview([
-		'width'=>800,
-		'height'=>600,
-		'wartermark'=>'',
-		'mediaId'=>$lst['thumbnail']]),['class'=>'img-responsive', 'alt' => $lst['title']])?>
-		<br>
-				<div class="marginTop15">
-					<a class="linkTitleWhite" href="<?php echo Workflow::getLink($lst)?>"><?php echo $lst['title']?></a>
-				</div>
-				<br>
-                 <p class="linkAbstractWhite"><?php echo $lst['abstract']?iconv_substr($lst['abstract'],0,60, "UTF-8")."...":'';?></p>
-                </div>
-				<?php endforeach;?>
-            </div>
-        </div>
-    </section>
-    <?php endif;?>
- <?php endif;?>
-    <!--Popular Videos Here-->

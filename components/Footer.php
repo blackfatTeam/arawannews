@@ -9,6 +9,7 @@ use app\Auth;
 use app\OnlineConfig;
 use app\models\Contents;
 use app\models\Online;
+use app\models\Category;
 use app\lib\Workflow;
 use app\controllers\ConfigController;
 
@@ -58,9 +59,23 @@ class Footer extends Widget {
 					}
 				}
 			}
-		}		
+		}
+		
+		$findCategory = Category::find();
+		$findCategory->andWhere('active =:active', [':active' => 1]);
+		$resultCategory = $findCategory->all();
+		
+		$arrCategory = [];
+		if (!empty($resultCategory)){
+			foreach ($resultCategory as $lst){
+				$arrCategory[$lst->id] = $lst->name;
+			}
+		
+		}
+		
 		echo $this->render('footer', [
-				'model' => $model
+				'model' => $model,
+				'arrCategory' => $arrCategory
 		]);
 	}	
 }
