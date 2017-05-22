@@ -91,7 +91,7 @@ use app\lib\Workflow;
                     </a>
                 </div>
                 <div class="row m0 post_contents">
-                	<?php if (!empty($lst['categoryId'])){?>
+                	<?php if (!empty(false)){?>
                     <div class="row m0 category politics">
                         <a href="#"><?php echo $lst['categoryId']?Workflow::$arrCategory[$lst['categoryId']]:''?></a>
                     </div>
