@@ -22,20 +22,22 @@ class CategoryController extends Controller
     {
     	$request = Yii::$app->request;
 		$section = $request->post('section');
+		
     	$web = 'bkk';
     	if (empty($section)){
     		$section = $request->get('section');
     	}
+
     	$category = null;
     	if (!empty($section)){
-    		$category = Category::find()->where(['id'=>$section])->one();
+    		$category = Category::find()->where(['nameEn'=>$section])->one();
     	}
     	$sectionTitle = $category?$category->name:'';
 
     	$query = Online::find();
     	$query->andWhere('web = :web', [':web' => $web]);
     	//$query->andWhere('section = :section', [':section' => $section]);
-    	$query->andWhere('categoryId = :categoryId', [':categoryId' => $section]);
+    	$query->andWhere('categoryId = :categoryId', [':categoryId' => $category->id]);
     	$query->orderBy('orderNo ASC');
     	$arrOnline = $query->all();
     	

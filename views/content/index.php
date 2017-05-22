@@ -43,7 +43,8 @@ img{
         		'content'=>$content,
         		'thumbnail'=>$thumbnail,
 				'relateContent'=>$relateContent,
-				'arrMedia' => $arrMedia
+				'arrMedia' => $arrMedia,
+				'arrCategoryId' => $arrCategoryId
         ]);?>
 			<!--Sidebar Here-->						
 			<div class="col-sm-4 sidebar">

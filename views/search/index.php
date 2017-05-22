@@ -36,11 +36,11 @@ $this->registerCss($css);
         <div class="col-sm-3 post post-1">
             <div class="row m0 inner">
                 <div class="row m0 featured_img">
-                    <a href="single-blog.html"><img src="<?= Workflow::getUripreview([
-                    		'width'=>250,
-                    		'height'=>250,
-                    		'mediaId'=>$model->thumbnail
-                    ])?>" alt=""></a>
+                    <a href="<?php echo Workflow::getLink($model)?>"><?php echo Html::img(Workflow::getUripreview([
+		'width'=>400,
+		'height'=>400,
+		'wartermark'=>'',
+		'mediaId'=>$model['thumbnail']]),['class'=>'featured-img', 'alt' => $model['title']])?></a>
                 </div>
                 <div class="row m0 post_contents">
                     <div class="row m0 category politics">

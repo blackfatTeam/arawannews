@@ -13,6 +13,7 @@ use app\models\Media;
 use app\lib\Workflow;
 use yii\helpers\Url;
 use app\models\Relatecontent;
+use app\models\Category;
 use yii\helpers\ArrayHelper;
 
 class ContentController extends Controller
@@ -77,13 +78,28 @@ class ContentController extends Controller
     		}
     	}
 
+    	$arrCategoryId = [];
+    	if (!empty($content->categoryId)){
+    		$query = Category::find();
+    		$query->andWhere('id = :id', [':id' => $content->categoryId]);
+    		$resultCategory = $query->one();
+    		
+    		if (!empty($resultCategory)){
+    			$arrCategoryId = [
+    					'id' => $resultCategory->id,
+    					'title' => $resultCategory->name,
+    					'titleEn' => $resultCategory->nameEn
+    			];
+    		}
+    	}
     	
         return $this->render('index',[
         		'content'=>$content,
         		'thumbnail'=>$thumbnail,
         		'relateContent'=>$relateContent,
         		'arrTags' => $arrTags,
-        		'arrMedia' => $arrMedia
+        		'arrMedia' => $arrMedia,
+        		'arrCategoryId' => $arrCategoryId
         ]);
     }
 }

@@ -25,7 +25,11 @@ class Sidebar extends Widget {
 		$arrCategory = [];
 		if (!empty($resultCategory)){
 			foreach ($resultCategory as $lst){
-				$arrCategory[$lst->id] = $lst->name;
+				$arrCategory[$lst->id] = [
+						'id' => $lst->id,
+						'title' => $lst->name?$lst->name:'',
+						'titleEn' => $lst->nameEn?$lst->nameEn:'',
+				];
 			}
 				
 		}

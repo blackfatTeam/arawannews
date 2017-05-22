@@ -81,7 +81,7 @@ $uri = Yii::$app->controller->getRoute();
 							<ul class="nav">
 								<?php 
 								foreach ($arrCategory as $key => $lst):?>
-								<li><a href="<?php echo Url::toRoute(['category/'.$key]);?>"><?php echo $lst?></a></li>
+								<li><a href="<?php echo Url::toRoute(['category/'.$lst['titleEn']]);?>"><?php echo $lst['title']?$lst['title']:'';?></a></li>
 								<?php endforeach;?>
 							</ul>
 						</li>

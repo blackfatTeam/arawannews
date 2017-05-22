@@ -19,7 +19,7 @@ use yii\helpers\Url;
 <?php if (!empty($model['highlight'])):?>
 <section class="row featured_posts">
 	<div class="container-fluid">
-		<div class="row highlightBg"><div class="highlightText"><a href="<?php echo Url::toRoute(['category/'.'1']);?>" class="highlightLink">เกาะกระแส</a></div></div>
+		<div class="row highlightBg"><div class="highlightText"><a href="<?php echo Url::toRoute(['category/hottopic']);?>" class="highlightLink">เกาะกระแส</a></div></div>
 		<div class="row">
 			<div class="col-lg-6 col-md-6 post">
 				<?php $arrModel = array_splice($model['highlight'], 0 ,1);?>
@@ -157,7 +157,7 @@ use yii\helpers\Url;
 <section class="row featured_posts">
 	<div class="container-fluid">
 		<section>
-			<div class="row headlineBg"><a href="<?php echo Url::toRoute(['category/'.'2']);?>" class="headline">เจาะประเด็น</a></div>
+			<div class="row headlineBg"><a href="<?php echo Url::toRoute(['category/highlight']);?>" class="headline">เจาะประเด็น</a></div>
 			<div class="row">
 				<?php foreach ($model['hottopic'] as $lst):?>	
 				<div class="col-lg-3 col-md-3 post">
@@ -187,7 +187,7 @@ use yii\helpers\Url;
 		<div class="blog-data">
 			<?php if (!empty($model['pol'])):?>
 			<div class="col-lg-3 col-md-3">
-				<div class="row headlineBg"><a href="<?php echo Url::toRoute(['category/'.'4']);?>" class="headline">การเมือง</a></div>
+				<div class="row headlineBg"><a href="<?php echo Url::toRoute(['category/pol']);?>" class="headline">การเมือง</a></div>
 				<?php 
 				$spliceModel = array_splice($model['pol'], 0,1);
 				foreach ($spliceModel as $lst):?>
@@ -223,7 +223,7 @@ use yii\helpers\Url;
 			<?php endif;?>
 			<?php if (!empty($model['economy'])):?>
 			<div class="col-lg-3 col-md-3">
-				<div class="row headlineBg"><a href="<?php echo Url::toRoute(['category/'.'5']);?>" class="headline">เศรษฐกิจ</a></div>
+				<div class="row headlineBg"><a href="<?php echo Url::toRoute(['category/economy']);?>" class="headline">เศรษฐกิจ</a></div>
 				<?php 
 				$spliceModel = array_splice($model['economy'], 0,1);
 				foreach ($spliceModel as $lst):?>
@@ -258,7 +258,7 @@ use yii\helpers\Url;
 			<?php endif;?>
 			<?php if (!empty($model['crime'])):?>
 			<div class="col-lg-3 col-md-3">
-				<div class="row headlineBg"><a href="<?php echo Url::toRoute(['category/'.'8']);?>" class="headline">อาชญากรรม</a></div>
+				<div class="row headlineBg"><a href="<?php echo Url::toRoute(['category/crime']);?>" class="headline">อาชญากรรม</a></div>
 				<?php 
 				$spliceModel = array_splice($model['crime'], 0,1);
 				foreach ($spliceModel as $lst):?>
@@ -293,7 +293,7 @@ use yii\helpers\Url;
 			<?php endif;?>
 			<?php if (!empty($model['oversea'])):?>
 			<div class="col-lg-3 col-md-3">
-				<div class="row headlineBg"><a href="<?php echo Url::toRoute(['category/'.'9']);?>" class="headline">ต่างประเทศ</a></div>
+				<div class="row headlineBg"><a href="<?php echo Url::toRoute(['category/oversea']);?>" class="headline">ต่างประเทศ</a></div>
 				<?php 
 				$spliceModel = array_splice($model['oversea'], 0,1);
 				foreach ($spliceModel as $lst):?>
@@ -335,7 +335,7 @@ use yii\helpers\Url;
 		<div class="blog-data">
 			<?php if (!empty($model['royal'])):?>
 			<div class="col-lg-3 col-md-3">
-				<div class="row headlineBg"><a href="<?php echo Url::toRoute(['category/'.'3']);?>" class="headline">พระราชสำนัก</a></div>
+				<div class="row headlineBg"><a href="<?php echo Url::toRoute(['category/royal']);?>" class="headline">พระราชสำนัก</a></div>
 				<?php 
 				$spliceModel = array_splice($model['royal'], 0,1);
 				foreach ($spliceModel as $lst):?>
@@ -370,7 +370,7 @@ use yii\helpers\Url;
 			<?php endif;?>
 			<?php if (!empty($model['sport'])):?>
 			<div class="col-lg-3 col-md-3">
-				<div class="row headlineBg"><a href="<?php echo Url::toRoute(['category/'.'7']);?>" class="headline">กีฬา</a></div>
+				<div class="row headlineBg"><a href="<?php echo Url::toRoute(['category/sport']);?>" class="headline">กีฬา</a></div>
 				<?php 
 				$spliceModel = array_splice($model['sport'], 0,1);
 				foreach ($spliceModel as $lst):?>
@@ -405,7 +405,7 @@ use yii\helpers\Url;
 			<?php endif;?>
 			<?php if (!empty($model['ent'])):?>
 			<div class="col-lg-3 col-md-3">
-				<div class="row headlineBg"><a href="<?php echo Url::toRoute(['category/'.'6']);?>" class="headline">บันเทิง</a></div>
+				<div class="row headlineBg"><a href="<?php echo Url::toRoute(['category/ent']);?>" class="headline">บันเทิง</a></div>
 				<?php 
 				$spliceModel = array_splice($model['ent'], 0,1);
 				foreach ($spliceModel as $lst):?>
@@ -440,7 +440,7 @@ use yii\helpers\Url;
 			<?php endif;?>
 			<?php if (!empty($model['region'])):?>
 			<div class="col-lg-3 col-md-3">
-				<div class="row headlineBg"><a href="<?php echo Url::toRoute(['category/'.'10']);?>" class="headline">ภูมิภาค</a></div>
+				<div class="row headlineBg"><a href="<?php echo Url::toRoute(['category/region']);?>" class="headline">ภูมิภาค</a></div>
 				<?php 
 				$spliceModel = array_splice($model['region'], 0,1);
 				foreach ($spliceModel as $lst):?>
@@ -482,7 +482,7 @@ use yii\helpers\Url;
 		<div class="blog-data">
 			<?php if (!empty($model['social'])):?>
 			<div class="col-lg-3 col-md-3">
-				<div class="row headlineBg"><a href="<?php echo Url::toRoute(['category/'.'12']);?>" class="headline">วัฒนธรรม</a></div>
+				<div class="row headlineBg"><a href="<?php echo Url::toRoute(['category/social']);?>" class="headline">วัฒนธรรม</a></div>
 				<?php 
 				$spliceModel = array_splice($model['social'], 0,1);
 				foreach ($spliceModel as $lst):?>
@@ -517,7 +517,7 @@ use yii\helpers\Url;
 			<?php endif;?>
 			<?php if (!empty($model['it'])):?>
 			<div class="col-lg-3 col-md-3">
-				<div class="row headlineBg"><a href="<?php echo Url::toRoute(['category/'.'13']);?>" class="headline">ไอที-นวัตกรรม</a></div>
+				<div class="row headlineBg"><a href="<?php echo Url::toRoute(['category/it']);?>" class="headline">ไอที-นวัตกรรม</a></div>
 				<?php 
 				$spliceModel = array_splice($model['it'], 0,1);
 				foreach ($spliceModel as $lst):?>
@@ -552,7 +552,7 @@ use yii\helpers\Url;
 			<?php endif;?>
 			<?php if (!empty($model['tech'])):?>
 			<div class="col-lg-3 col-md-3">
-				<div class="row headlineBg"><a href="<?php echo Url::toRoute(['category/'.'22']);?>" class="headline">นวัตกรรม</a></div>
+				<div class="row headlineBg"><a href="<?php echo Url::toRoute(['category/tech']);?>" class="headline">นวัตกรรม</a></div>
 				<?php 
 				$spliceModel = array_splice($model['tech'], 0,1);
 				foreach ($spliceModel as $lst):?>
@@ -587,7 +587,7 @@ use yii\helpers\Url;
 			<?php endif;?>
 			<?php if (!empty($model['health'])):?>
 			<div class="col-lg-3 col-md-3">
-				<div class="row headlineBg"><a href="<?php echo Url::toRoute(['category/'.'14']);?>" class="headline">สุขภาพ</a></div>
+				<div class="row headlineBg"><a href="<?php echo Url::toRoute(['category/health']);?>" class="headline">สุขภาพ</a></div>
 				<?php 
 				$spliceModel = array_splice($model['health'], 0,1);
 				foreach ($spliceModel as $lst):?>
@@ -635,7 +635,7 @@ use yii\helpers\Url;
 				foreach ($spliceModel as $lst):?>
 				<div class="col-lg-3 col-md-3 post">
 				<div class="row inner" style="position: relative;">
-					<div class="second-header"><a href="<?php echo Url::toRoute(['category/'.'18']);?>">กิน</a></div>
+					<div class="second-header"><a href="<?php echo Url::toRoute(['category/food']);?>">กิน</a></div>
 
 					<a href="<?php echo Workflow::getLink($lst)?>" style="z-index: 2;">
 							<?php echo Html::img(Workflow::getUripreview([
@@ -663,7 +663,7 @@ use yii\helpers\Url;
 				foreach ($spliceModel as $lst):?>
 				<div class="col-lg-3 col-md-3 post">
 				<div class="row inner" style="position: relative;">
-					<div class="second-header"><a href="<?php echo Url::toRoute(['category/'.'20']);?>">ช๊อป</a></div>
+					<div class="second-header"><a href="<?php echo Url::toRoute(['category/shopping']);?>">ช๊อป</a></div>
 
 					<a href="<?php echo Workflow::getLink($lst)?>" style="z-index: 2;">
 							<?php echo Html::img(Workflow::getUripreview([
@@ -690,7 +690,7 @@ use yii\helpers\Url;
 				foreach ($spliceModel as $lst):?>
 				<div class="col-lg-3 col-md-3 post">
 				<div class="row inner" style="position: relative;">
-					<div class="second-header"><a href="<?php echo Url::toRoute(['category/'.'17']);?>">ดวง</a></div>
+					<div class="second-header"><a href="<?php echo Url::toRoute(['category/horoscope']);?>">ดวง</a></div>
 
 					<a href="<?php echo Workflow::getLink($lst)?>" style="z-index: 2;">
 							<?php echo Html::img(Workflow::getUripreview([
@@ -717,7 +717,7 @@ use yii\helpers\Url;
 				foreach ($spliceModel as $lst):?>
 				<div class="col-lg-3 col-md-3 post">
 				<div class="row inner" style="position: relative;">
-					<div class="second-header"><a href="<?php echo Url::toRoute(['category/'.'19']);?>">เที่ยว-พักผ่อน</a></div>
+					<div class="second-header"><a href="<?php echo Url::toRoute(['category/travel']);?>">เที่ยว-พักผ่อน</a></div>
 
 					<a href="<?php echo Workflow::getLink($lst)?>" style="z-index: 2;">
 							<?php echo Html::img(Workflow::getUripreview([
