@@ -91,7 +91,7 @@ use app\lib\Workflow;
                     </a>
                 </div>
                 <div class="row m0 post_contents">
-                	<?php if (!empty(false)){?>
+                	<?php if (false){?>
                     <div class="row m0 category politics">
                         <a href="#"><?php echo $lst['categoryId']?Workflow::$arrCategory[$lst['categoryId']]:''?></a>
                     </div>
@@ -117,7 +117,7 @@ use app\lib\Workflow;
                     </div>
                 </div>
                 <div class="row m0 post_contents">
-                	<?php if (!empty(false)){?>
+                	<?php if (false){?>
                     <div class="row m0 category world">
                         <a href="javascript:;"><?php echo $lst['categoryId']?Workflow::$arrCategory[$lst['categoryId']]:''?></a>
                     </div>
